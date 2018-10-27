@@ -8,7 +8,8 @@
             $test=$c->add();
             if($test==true)
             {
-                echo '<script>alert("L ajout du client effectué avec succes")  </script>';
+                require_once 'alert.php';
+                show("L\tajout du client effectué avec succes");
             }
         }
     } 

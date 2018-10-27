@@ -1,45 +1,51 @@
 <form method="POST" action="">
-    <table>
-        <tr>
-            <td>
-                Login
-            </td>
-            <td>
-                <input type="text" name="login" placeholder="Votre login" />
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Votre mot de passe
-            </td>
-            <td>
-                <input type="password" name="password" placeholder="Votre mot de passe" />
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Nom
-            </td>
-            <td>
-                <input type="text" name="nom" placeholder="Votre nom" />
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Prenom
-            </td>
-            <td>
-                <input type="text" name="prenom" placeholder="Votre prenom" />
-            </td>
-        </tr>
-        <tr>
-            <td><input type="submit" value="Inscrire" name="btInscrire"</td>
-            <td><input type="reset" value="Annuler" name="btAnnuler"</td>
-        </tr>
-    </table>
+    <fieldset style="width:100px">
+        <legend>Inscription</legend>
+        <table>
+            <tr>
+                <td>
+                    Login
+                </td>
+                <td>
+                    <input type="text" name="login" placeholder="Votre login" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Votre mot de passe
+                </td>
+                <td>
+                    <input type="password" name="password" placeholder="Votre mot de passe" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Nom
+                </td>
+                <td>
+                    <input type="text" name="nom" placeholder="Votre nom" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Prenom
+                </td>
+                <td>
+                    <input type="text" name="prenom" placeholder="Votre prenom" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Inscrire" name="btInscrire"/>
+                </td>
+                <td>
+                    <input type="reset" value="Annuler" name="btAnnuler"/>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
 </form>
 <?php
-    
     if(isset($_POST['btInscrire']))
     {
         if($_POST['btInscrire']==true)
