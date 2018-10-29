@@ -11,7 +11,7 @@
                 {
                     case 'inscription' : require_once('../App/View/inscription.php');
                     break;
-                    case 'login' : require_once('../App/View/login');
+                    case 'login' : require_once('../App/View/login.php');
                     break;
                     default : echo "Page n'existe pas";
                     break;
