@@ -12,7 +12,7 @@
         <!-- Custom styles for this template -->
         <link href="https://getbootstrap.com/docs/4.0/examples/sign-in/signin.css" rel="stylesheet">
     </head>
-    <body class="text-center">
+    <body class="text-center" style="background-color: #D8D8D8">
         <form class="form-signin">
             <img class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
             <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
