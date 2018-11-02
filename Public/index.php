@@ -6,7 +6,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
         <link rel="icon" href="https://getbootstrap.com/favicon.ico">
-        <title>Signin Template for Bootstrap</title>
+        <title>Altro TUNISIA</title>
         <!-- Bootstrap core CSS -->
         <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
         <!-- Custom styles for this template -->
