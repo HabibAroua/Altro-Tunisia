@@ -1,5 +1,6 @@
 <?php
     require_once('../App/DataBase/query.php');
+    
     class Client
     {
         private $date_res;
