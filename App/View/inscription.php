@@ -1,61 +1,41 @@
-<form method="POST" action="">
-    <fieldset style="width:100px">
-        <legend>Inscription</legend>
-        <table>
-            <tr>
-                <td>
-                    Login
-                </td>
-                <td>
-                    <input type="text" name="login" placeholder="Votre login" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Votre mot de passe
-                </td>
-                <td>
-                    <input type="password" name="password" placeholder="Votre mot de passe" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Nom
-                </td>
-                <td>
-                    <input type="text" name="nom" placeholder="Votre nom" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Prenom
-                </td>
-                <td>
-                    <input type="text" name="prenom" placeholder="Votre prenom" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input type="submit" value="Inscrire" name="btInscrire"/>
-                </td>
-                <td>
-                    <input type="reset" value="Annuler" name="btAnnuler"/>
-                </td>
-            </tr>
-        </table>
-    </fieldset>
-</form>
-<?php
-    if(isset($_POST['btInscrire']))
-    {
-        if($_POST['btInscrire']==true)
-        {
-            require_once('../App/Controller/ClientController.php');
-            if((isset($_POST['login'])) && (isset($_POST['password'])) && (isset($_POST['nom'])) && (isset($_POST['prenom'])))
-            {
-                $c=new ClientController();
-                $c->ajouterClient($_POST['login'],$_POST['password'],$_POST['nom'],$_POST['prenom']);
-            }
-        }
-    }
-?>
+<div style="padding-right: 1px "><div class="padding">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-md-3 col-sm-xs-12">
+                <form class="form-signin">
+                    <h1 class="h3 mb-3 font-weight-normal">Inscription</h1>
+                    <label for="inputEmail" class="sr-only">Email address</label>
+                    <input type="email" id="inputEmail" class="form-control" placeholder="Login" required autofocus>
+                    <label for="inputEmail" class="sr-only">Email address</label>
+                    <input type="email" id="inputEmail" class="form-control" placeholder="Mot de passe" required autofocus>
+                    <label for="inputEmail" class="sr-only">Email address</label>
+                    <input type="email" id="inputEmail" class="form-control" placeholder="Confirmer votre mot de passe" required autofocus>
+                    <label for="inputEmail" class="sr-only">Email address</label>
+                    <input type="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
+                    <label for="inputEmail" class="sr-only">Email address</label>
+                    <input type="email" id="inputEmail" class="form-control" placeholder="Date de naissance" required autofocus>
+                    <label for="inputEmail" class="sr-only">Email address</label>
+                    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                    
+                    <div class="checkbox mb-3">
+                        <label>
+                            <input type="checkbox" value="remember-me"> Remember me
+                        </label>
+                    </div>
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">
+                         Sign in
+                    </button>
+                    <p class="mt-5 mb-3 text-muted">&copy; 2018-2019</p>
+                </form>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-xs-12">
+                <img src="picture/inscription.png" style="height:500px; width:500px;" />
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</div>
