@@ -42,7 +42,7 @@
         {
             session_start ();
             // On récupère nos variables de session
-            if (isset($_SESSION['login']) && isset($_SESSION['pwd']) && isset($_COOKIE['login']) )
+            if (isset($_SESSION['login']) && isset($_SESSION['password']) && isset($_COOKIE['login']) )
             {
                 // On teste pour voir si nos variables ont bien été enregistrées
 	            // On affiche un lien pour fermer notre session
