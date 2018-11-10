@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 col-md-3 col-sm-xs-12">
-                <form class="form-signin">
+                <form class="form-signin" method="POST" action="">
                     <center>
                         <img class="mb-4" src="http://localhost/SiteWebCommercial/Public/picture/AltroTunisia.png" alt="" width="72" height="72">
                     </center>
@@ -16,7 +16,7 @@
                             <input type="checkbox" value="remember-me"> Remember me
                         </label>
                     </div>
-                    <button class="btn btn-lg btn-primary btn-block" type="submit">
+                    <button class="btn btn-lg btn-primary btn-block" type="submit" name="bt_login">
                          Sign in
                     </button>
                     <p class="mt-5 mb-3 text-muted">&copy; 2018-2019</p>
@@ -29,3 +29,9 @@
     </div>
 </div>
 </div>
+<?php
+    if(isset($_POST['bt_login']))
+	{
+		
+	}
+?>
