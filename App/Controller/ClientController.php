@@ -12,5 +12,6 @@
                 show("L\tajout du client effectué avec succes");
             }
         }
-    } 
+    }
+    
 ?>
