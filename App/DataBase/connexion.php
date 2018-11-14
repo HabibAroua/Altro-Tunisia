@@ -64,7 +64,7 @@
 		}
 		
 	}
-	$connection=new Connection('localhost','Projet1','root','');
+	$connection=new Connection('localhost','altro_tunisia','root','');
 	
     /*
 	$query="insert into etudiant values(null,'Hatem','Aziza')";

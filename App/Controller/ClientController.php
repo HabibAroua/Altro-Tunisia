@@ -2,14 +2,23 @@
     require_once('../App/Model/Client.php');
     class ClientController
     {
-        public function ajouterClient($login,$password,$nom,$prenom)
+        public function ajouterClient($login,$password,$confPassword,$nom,$prenom,$email,$date_naissance)
         {
-            //$c=new Client($login,$password,$nom,$prenom);
-            //$test=$c->add();
-            //if($test==true)
-            //{
+            if($password!=$confPassword)
+            {
                 require_once 'alert.php';
-                show("L\tajout du client effectué avec succes");
+                show("Vérifier la confirmation de mot de passe");
+            }
+            else
+            {
+                $c=new Client($login,$password,$nom,$prenom,$email,$date_naissance);
+                $test=$c->add();
+                if($test==true)
+                {
+                    require_once 'alert.php';
+                    show("L\tajout du client effectué avec succes");
+                }
+            }
             //}
         }
     }
