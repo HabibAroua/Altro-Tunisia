@@ -4,13 +4,13 @@
     {
         public function ajouterClient($login,$password,$nom,$prenom)
         {
-            $c=new Client($login,$password,$nom,$prenom);
-            $test=$c->add();
-            if($test==true)
-            {
+            //$c=new Client($login,$password,$nom,$prenom);
+            //$test=$c->add();
+            //if($test==true)
+            //{
                 require_once 'alert.php';
                 show("L\tajout du client effectué avec succes");
-            }
+            //}
         }
     }
     

@@ -2,7 +2,7 @@
     
     function show($message)
     {
-        echo "<script> alert('$message')</script>";
+        echo "<script> basicMessage('$message');</script>";
     }
 
 ?>
