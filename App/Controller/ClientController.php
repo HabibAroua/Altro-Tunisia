@@ -23,7 +23,30 @@
         
         public function login($login,$password)
         {
-            
+            $c=new Client('','','','','','','');
+            //echo json_encode($c->allClient());
+            $T=$c->allClient();
+            $myLogin='';
+            $myPassword='';
+            foreach($T as $v)
+            {
+                if((strcasecmp($v{'login'},$login)==0) && (strcasecmp($v{'password'},sha1($password))==0))
+                {
+                    $myLogin= $v{'login'};
+                    $myPassword= $v{'password'};
+                    break;
+                }
+            }
+            if($myLogin=='')
+            {
+                echo 'Error';
+            }
+            else
+            {
+                require 'Session.php';
+                $session=new Session();
+                $session->connect($myLogin,$myPassword);
+            }
         }
     }
     

@@ -7,10 +7,10 @@
                         <img class="mb-4" src="http://localhost/SiteWebCommercial/Public/picture/AltroTunisia.png" alt="" width="72" height="72">
                     </center>
                     <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-                    <label for="inputEmail" class="sr-only">Email address</label>
-                    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                    <label for="inputLogin" class="sr-only">Login</label>
+                    <input type="text" id="inputLogin" class="form-control" placeholder="Votre login" name="login" required autofocus>
                     <label for="inputPassword" class="sr-only">Password</label>
-                    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                    <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password" required>
                     <div class="checkbox mb-3">
                         <label>
                             <input type="checkbox" value="remember-me"> Remember me
@@ -32,7 +32,8 @@
 <?php
     if(isset($_POST['bt_login']))
 	{
-		echo "<script>alert('hello');</script>";
-		header('Location: Accueil.php');
+		require_once('../App/Controller/ClientController.php');
+		$c=new ClientController();
+		$c->login($_POST['login'],$_POST['password']);
 	}
 ?>

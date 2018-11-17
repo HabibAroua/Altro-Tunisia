@@ -12,6 +12,11 @@
         <link rel="stylesheet" type="text/css" href="css/sweetalert2.css">
     </head>
     <body>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="javascript/sweetalert2.js"></script>
+        <script src="javascript/Alert.js"></script>
         <?php
             if(isset($_GET['page']))
             {

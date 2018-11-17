@@ -1,6 +1,6 @@
 <?php
-    //require_once('../App/DataBase/connexion.php');
-    require_once('../DataBase/connexion.php');
+    require_once('../App/DataBase/connexion.php');
+    //require_once('../DataBase/connexion.php');
     function input($req)
     {
         global $connection;
