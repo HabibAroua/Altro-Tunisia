@@ -32,6 +32,7 @@
 <?php
     if(isset($_POST['bt_login']))
 	{
-		//
+		echo "<script>alert('hello');</script>";
+		header('Location: Accueil.php');
 	}
 ?>

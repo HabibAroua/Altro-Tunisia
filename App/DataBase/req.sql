@@ -3,7 +3,7 @@ create database altro_tunisia ;
 create table client 
 (
     login varchar(50) primary key ,
-    password varchar(50) ,
+    password varchar(255) ,
     nom varchar(50) ,
     prenom varchar(50) ,
     email varchar(50) unique ,

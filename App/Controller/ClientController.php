@@ -11,7 +11,7 @@
             }
             else
             {
-                $c=new Client($login,$password,$nom,$prenom,$email,$date_naissance);
+                $c=new Client($login,sha1($password),$nom,$prenom,$email,$date_naissance);
                 $test=$c->add();
                 if($test==true)
                 {
@@ -19,7 +19,6 @@
                     show("L\tajout du client effectué avec succes");
                 }
             }
-            //}
         }
     }
     
