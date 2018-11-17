@@ -20,6 +20,11 @@
                 }
             }
         }
+        
+        public function login($login,$password)
+        {
+            
+        }
     }
     
 ?>

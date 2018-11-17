@@ -15,7 +15,7 @@
 	            $this->dbname=$dbname;
 	            $this->username=$username;	
 	            $this->password	=$password;
-				$this->con=new PDO("mysql:host=$this->host;	dbname=$this->dbname",$this->username,$this->password);			
+				$this->con=new PDO("mysql:host=$this->host;	dbname=$this->dbname",$this->username,$this->password);
 			}	
             catch(PDOException	$pe)	
 	        {

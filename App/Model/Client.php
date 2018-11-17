@@ -1,5 +1,6 @@
 <?php
-    require_once('../App/DataBase/query.php');
+    //require_once('../App/DataBase/query.php');
+    require_once('../DataBase/query.php');
     class Client
     {
         private $login;
@@ -88,7 +89,25 @@
         
         public function allClient()
         {
-            
+            $res=output("select * from client ");
+            $i=0;
+            while($tab=$res->fetch(PDO::FETCH_NUM))
+            {
+              $T[$i]=$client = array('login'=>$tab[0]." ",'password'=>$tab[1]." ",'nom'=>$tab[2]." ",'prenom'=>$tab[3]." ",'email'=>$tab[4]." ",'date_naissance'=>$tab[5]." ",'date_inscription'=>$tab[6],);
+              $i++;
+		 	}
+            return $T;
         }
+    }
+    $c=new Client('','','','','','','');
+    //echo json_encode($c->allClient());
+    $T=$c->allClient();
+    
+    echo $T[0]{'login'}.'<br>';
+    echo $T[1]{'login'}.'<br>';
+    
+    foreach($T as $v)
+    {
+        echo $v{'login'}.'<br>';
     }
 ?>
