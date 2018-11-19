@@ -1,7 +1,16 @@
 <?php
     require_once('../App/Model/Client.php');
+    require 'Session.php';
+    
     class ClientController
     {
+        private $session;
+        
+        public function __construct()
+		{
+			$session=new Session();
+		}
+        
         public function ajouterClient($login,$password,$confPassword,$nom,$prenom,$email,$date_naissance)
         {
             if($password!=$confPassword)
@@ -43,10 +52,18 @@
             }
             else
             {
-                require 'Session.php';
-                $session=new Session();
-                $session->connect($myLogin,$myPassword);
+                $session->connect($myLogin,$myPassword,'Accueil');
             }
+        }
+        
+        public function IsLogin()
+        {
+            $session->afterConnection();
+        }
+        
+        public function LogOut()
+        {
+            $session->logOut();
         }
     }
     

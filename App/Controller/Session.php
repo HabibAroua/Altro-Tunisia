@@ -2,7 +2,7 @@
     
     class Session
     {
-        public function connect($login,$password)
+        public function connect($login,$password,$page)
         {
 			// dans ce cas, tout est ok, on peut démarrer notre session
             // on la démarre :)
@@ -11,9 +11,9 @@
 		    setcookie('login', $login, time() + 60);
 		    setcookie('password', $password, time() + 60);
 		    $_SESSION['login'] = $login;
-		    $_SESSION['pwd'] = $password;
+		    $_SESSION['password'] = $password;
             // on redirige notre visiteur vers une page de notre section membre
-		    header ('location: Accueil.php');
+		    header ("location: $page.php");
         }
         
         public function afterConnection()
@@ -24,11 +24,11 @@
             {
                 // On teste pour voir si nos variables ont bien été enregistrées
 	            // On affiche un lien pour fermer notre session
-	            echo '<a href="./logout.php">Déconnection</a>';
+	            echo '<a href="logout.php">Déconnection</a>';
             }
             else
             {
-                header ('location: login.php');
+                header ('location: index.php?page=login');
             }
         }
         
@@ -40,7 +40,7 @@
             // On détruit notre session
             session_destroy ();
             // On redirige le visiteur vers la page d'accueil
-            header ('location: login.php');
+            header ('location: index.php?page=login');
         }
     }
 
