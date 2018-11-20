@@ -2,14 +2,14 @@
     
     class Session
     {
-        public function connect($login,$password,$page)
+        public function connect($login,$password,$page,$s)
         {
 			// dans ce cas, tout est ok, on peut démarrer notre session
             // on la démarre :)
 		    session_start ();
 		    // on enregistre les paramètres de notre visiteur comme variables de session ($login et $pwd) (notez bien que l'on utilise pas le $ pour enregistrer ces variables)
-		    setcookie('login', $login, time() + 60);
-		    setcookie('password', $password, time() + 60);
+		    setcookie('login', $login, time() + $s);
+		    setcookie('password', $password, time() + $s);
 		    $_SESSION['login'] = $login;
 		    $_SESSION['password'] = $password;
             // on redirige notre visiteur vers une page de notre section membre

@@ -1,6 +1,7 @@
 <?php
+
     require_once('../App/Model/Client.php');
-    require 'Session.php';
+    require 'Session.php' ;
     
     class ClientController
     {
@@ -8,7 +9,7 @@
         
         public function __construct()
 		{
-			$session=new Session();
+			$this->session=new Session();
 		}
         
         public function ajouterClient($login,$password,$confPassword,$nom,$prenom,$email,$date_naissance)
@@ -52,19 +53,19 @@
             }
             else
             {
-                $session->connect($myLogin,$myPassword,'Accueil');
+                $this->session->connect($myLogin,$myPassword,'Accueil',3600*48);
             }
         }
         
         public function IsLogin()
         {
-            $session->afterConnection();
+            $this->session->afterConnection();
         }
         
         public function LogOut()
         {
-            $session->logOut();
+            $this->session->logOut();
         }
     }
-    
+	
 ?>

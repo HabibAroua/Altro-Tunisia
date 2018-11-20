@@ -79,12 +79,12 @@
         
         public function update()
         {
-            
+            //requette update   
         }
         
         public function delete()
         {
-            
+            //requette delete
         }
         
         public function allClient()
