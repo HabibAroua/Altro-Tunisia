@@ -121,5 +121,4 @@
         echo "<script>alert('Hello world');</script>";
         header('Location: Accueil.php');
     }
-
 ?>
