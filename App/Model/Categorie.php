@@ -27,19 +27,27 @@
             return input("insert into Produit values('$this->id','$this->libelle')");
         }
         
-        public function update()
+        public function update($id)
         {
+            return input("update table categorie set libelle=$this->libelle where id=$id");
 
         }
 
-        public function delete()
+        public function delete($id)
         {
-
+            return input("delete categorie where id=$id");
         }
 
-        public function allClient()
+        public function allCategorie()
         {
-
+            $res=output("select * from categorie ");
+            $i=0;
+            while($tab=$res->fetch(PDO::FETCH_NUM))
+            {
+              $T[$i]=$categorie = array('id'=>$tab[0]."",'libelle'=>$tab[1],);
+              $i++;
+		 	}
+            return $T;
         }
     }
 
