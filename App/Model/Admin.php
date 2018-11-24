@@ -47,19 +47,26 @@ require_once('../App/DataBase/query.php');
             return input("insert into client values('$this->login','$this->motDePAsse','$this->nom','$this->prenom','this->date_res')");
         }
 
-        public function update()
+        public function update($login)
         {
-
+            return input("update table admin set login='$this->login' , motDePasse='$this->motDePasse' , nom='$this->nom' , prenom='$this->prenom' where login='$login' ");
         }
         
         public function delete()
         {
-
+            return input("delete admin where login='$login'");
         }
 
-        public function allClient()
+        public function allAdmin()
         {
-
+            $res=output("select * from admin ");
+            $i=0;
+            while($tab=$res->fetch(PDO::FETCH_NUM))
+            {
+              $T[$i]=$admin = array('login'=>$tab[0]."",'password'=>$tab[1]."",'nom'=>$tab[2]."",'prenom'=>$tab[3]."",'email'=>$tab[4]."",'date_naissance'=>$tab[5]."",'date_inscription'=>$tab[6],);
+              $i++;
+		 	}
+            return $T;
         }
     }
 
