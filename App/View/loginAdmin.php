@@ -45,3 +45,9 @@
         
         </div>
     </div>
+<?php
+         if(isset($_POST['bt_login']))
+        {
+            header("Location: Accueil.php");
+        }
+?>

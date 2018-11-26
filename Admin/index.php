@@ -1,10 +1,8 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
     <head>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Documento sin t&iacute;tulo</title>
          <link href="bootstrap/bootstrap.min.css" rel="stylesheet"/>    
         <link href="bootstrap/bootstrap-theme.css" rel="stylesheet"/>
         <link href="fonts/OleoScript-Regular.ttf" rel="stylesheet" />
@@ -66,18 +64,18 @@
             font-family: fuentechida;
         }
   
-    .Input{
+    .Input
+	{
         transition: .8s;
         background-color: rgba(0,0,0,.5);
         color: darkcyan;
         border-color:#006;
-	border-bottom-color:blueviolet;
+	    border-bottom-color:blueviolet;
         border-bottom-style:groove;
-	border-left:none;
-	border-right:none;
-	border-top:none;
+	    border-left:none;
+	    border-right:none;
+	    border-top:none;
         border-width: 4px;
-        
     }
 
     .Input:hover{
@@ -115,10 +113,3 @@
     ?>
 </body>
 </html>
-<?php
-    if(isset($_POST['bt_login']))
-    {
-        echo "<script>alert('Hello world');</script>";
-        header('Location: Accueil.php');
-    }
-?>
