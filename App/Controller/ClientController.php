@@ -1,5 +1,4 @@
 <?php
-
     require_once('../App/Model/Client.php');
     require 'Session.php' ;
     
@@ -66,6 +65,60 @@
         {
             $this->session->logOut();
         }
+		
+		public function getAllClient()
+		{
+			$c=new Client('','','','','','','');
+            //echo json_encode($c->allClient());
+            $T=$c->allClient();
+			return $T;
+		}
+		
+		public function findClientByLogin($login)
+		{
+			$c=new Client('','','','','','','');
+			$c->findClientByLogin($login);
+			return $c;
+		}
+		
+		public function modifierClient($c,$login)
+		{
+			$test=$c->update($login);
+			if($test)
+			{
+				require_once 'alert.php';
+                show("Modification effectué avec succes");
+			}
+			else
+			{
+				require_once 'alert.php';
+                show("Echoué");
+			}
+		}
+		
+		public function changerPassword($newPassword,$oldPassword,$login)
+		{
+			$c=new Client('','','','','','','');
+			if($_SESSION['password']==sha1($oldPassword))
+			{
+				$test=$c->editPassword($login,sha1($newPassword));
+				if($test)
+				{
+					require_once 'alert.php';
+                    show("Modification du mot de passe effectué avec succes");
+				}
+				else
+				{
+					require_once 'alert.php';
+                    show("Eurreur au niveau de modification du modification");
+				}
+			}
+			else
+			{
+				require_once 'alert.php';
+                show("Vérifié le mot de passe");
+			}
+		}
     }
 	
 ?>

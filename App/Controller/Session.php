@@ -1,5 +1,4 @@
 <?php
-    
     class Session
     {
         public function connect($login,$password,$page,$s)
