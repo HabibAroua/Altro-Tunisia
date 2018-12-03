@@ -19,6 +19,12 @@
                     </tr>
                </thead>
                <tbody>
+                    <script>
+                         function show()
+                         {
+                              alert("Hello world");
+                         }
+                    </script>
                     <?php
                          foreach($T as $v)
                          {
@@ -31,7 +37,7 @@
                               echo "<td> $nom</td>";
                               echo "<td> $prenom</td>";
                               echo "<td> $email</td>";
-                              echo "<td><button>Supprimer</button></td>";
+                              echo "<td><button onclick='show();'>Supprimer</button></td>";
                               echo '</tr>';
                          }
                     ?>
