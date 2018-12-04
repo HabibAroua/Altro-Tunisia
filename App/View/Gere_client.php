@@ -19,10 +19,28 @@
                     </tr>
                </thead>
                <tbody>
+                    <script src="javascript/sweetalert2.min.js"></script>
                     <script>
-                         function show()
+                         function show(id)
                          {
-                              alert("Hello world");
+                              //document.location.href="http://localhost/SiteWebCommercial/Admin/Accueil.php?page="+id;
+                  swal({
+  title: 'Are you sure?',
+  text: 'You will not be able to recover this imaginary file!',
+  type: 'warning',
+  showCancelButton: true,
+  confirmButtonColor: '#3085d6',
+  cancelButtonColor: '#d33',
+  confirmButtonText: 'Yes, delete it!',
+  closeOnConfirm: false
+},
+function() {
+  swal(
+    'Deleted!',
+    'Your file has been deleted.',
+    'success'
+  );
+});
                          }
                     </script>
                     <?php
@@ -37,7 +55,9 @@
                               echo "<td> $nom</td>";
                               echo "<td> $prenom</td>";
                               echo "<td> $email</td>";
-                              echo "<td><button onclick='show();'>Supprimer</button></td>";
+                              ?>
+                              <td><input type='submit' onclick="show('<?php echo $login  ?>');" value='Supprimer' /></td>
+                         <?php
                               echo '</tr>';
                          }
                     ?>
@@ -45,3 +65,9 @@
           </table>
      </div>
 </div>
+<?php
+     if(isset($_GET['page']))
+     {
+          echo 'La page est '.$_GET['page']; 
+     }
+?>
