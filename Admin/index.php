@@ -109,7 +109,7 @@
 
 <body>
     <?php
-        require_once('../App/View/loginAdmin.php');
+        require_once('../App/View/default/loginAdmin.php');
     ?>
 </body>
 </html>

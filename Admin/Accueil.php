@@ -143,7 +143,7 @@
         
         <script src="javascript/Alert.js"></script>
         <?php
-            require_once('../App/View/Gere_client.php');
+            require_once('../App/View/Client/Gere_client.php');
         ?>
     </body>
 </html>é
