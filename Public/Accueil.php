@@ -158,7 +158,7 @@
 						{
 							if($_GET['page']=='profil')
 							{
-								require_once('../App/View/info_client.php');
+								require_once('../App/View/Client/info_client.php');
 							}
 						}
 					}

@@ -13,6 +13,7 @@
         
         public function ajouterClient($login,$password,$confPassword,$nom,$prenom,$email,$date_naissance)
         {
+			$testHeader=false;
             if($password!=$confPassword)
             {
                 require_once 'alert.php';
@@ -26,6 +27,7 @@
                 {
                     require_once 'alert.php';
                     show("L\tajout du client effectué avec succes");
+					$testHeader=true;
                 }
             }
         }

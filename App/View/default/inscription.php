@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 col-md-3 col-sm-xs-12">
-                <form class="form-signin" method="POST" action="">
+                <form class="form-signin" method="POST" action="index.php?page=login">
                     <h1 class="h3 mb-3 font-weight-normal">Inscription</h1>
                     <label for="inputLogin" class="sr-only">Login</label>
                     <input type="text" id="inputLogin" class="form-control" placeholder="Login" name="login" required autofocus>
@@ -35,11 +35,3 @@
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-<?php
-    if(isset($_POST['bt_inscription']))
-	{
-		require_once('../App/Controller/ClientController.php');
-		$c=new ClientController();
-		$c->ajouterClient($_POST['login'],$_POST['password'],$_POST['confPassword'],$_POST['nom'],$_POST['prenom'],$_POST['email'],$_POST['date_naissance']);
-	}
-?>
