@@ -19,29 +19,44 @@
                     </tr>
                </thead>
                <tbody>
-                    <script src="javascript/sweetalert2.min.js"></script>
+                    
                     <script>
-                         function show(id)
-                         {
+                         //function show(id)
+                         //{
                               //document.location.href="http://localhost/SiteWebCommercial/Admin/Accueil.php?page="+id;
-                  swal({
-  title: 'Are you sure?',
-  text: 'You will not be able to recover this imaginary file!',
-  type: 'warning',
-  showCancelButton: true,
-  confirmButtonColor: '#3085d6',
-  cancelButtonColor: '#d33',
-  confirmButtonText: 'Yes, delete it!',
-  closeOnConfirm: false
-},
-function() {
-  swal(
-    'Deleted!',
-    'Your file has been deleted.',
-    'success'
-  );
-});
-                         }
+					function show(id)
+					{
+						swal
+			               (
+						     {
+								title: "Are you sure?",
+								text: "Once deleted, you will not be able to recover this imaginary file!",
+                                        icon: "warning",
+                                        buttons: true,
+                                        dangerMode: true,
+							}
+			               )
+                              .then
+						(
+							 (willDelete) =>
+			                                   {
+							                    if (willDelete)
+				                                   {
+								                    swal
+					                                   (
+								                         "Poof! Your imaginary file has been deleted!",
+					                                        {
+						                                        icon: "success",
+													}
+				                                        );
+							                    }
+					                              else
+					                              {
+						                              swal("Your imaginary file is safe!");
+											}
+										}
+				          );
+					}            
                     </script>
                     <?php
                          foreach($T as $v)
