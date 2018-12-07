@@ -72,10 +72,10 @@
                               echo "<td> $email</td>";
                               ?>
                               <td><input type='submit' onclick="show('<?php echo $login  ?>');" value='Supprimer' /></td>
-                         <?php
+                              <?php
                               echo '</tr>';
                          }
-                    ?>
+                              ?>
                </tbody>
           </table>
      </div>

@@ -8,9 +8,16 @@ function validation()
     );
 }
          
-function basicMessage(text)
+function basicMessage(Mytext)
 {
-    swal(text);
+    swal
+        (
+            {
+                title: "Good job!",
+                text: Mytext,
+                icon: "success",
+            }
+        );
 }
 
 function errorMessage(title,text,footer)
