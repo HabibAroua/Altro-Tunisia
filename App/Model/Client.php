@@ -92,9 +92,9 @@
             return input("update client set login='$this->login' , password='$this->motDePAsse' , nom='$this->nom' , prenom='$this->prenom' , email='$this->email' , date_naissance='$this->date_naissance' , date_inscription='$this->date_inscription' where login='$login'");   
         }
         
-        public function delete()
+        public function delete($login)
         {
-            //requette delete
+            return input("delete from client where login='$login'");
         }
         
         public function allClient()

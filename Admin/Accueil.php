@@ -149,4 +149,4 @@
             require_once('../App/View/Client/Gere_client.php');
         ?>
     </body>
-</html>é
+</html>

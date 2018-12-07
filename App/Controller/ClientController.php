@@ -122,6 +122,22 @@
 			}
 		}
 		
+		public function supprimer($login)
+		{
+			$c=new Client('','','','','','','');
+			$test=$c->delete($login);
+			if($test)
+			{
+				require_once 'alert.php';
+                show("Suppression effectué avec succes");
+			}
+			else
+			{
+				require_once 'alert.php';
+                show("Erreur au niveau du supression");
+			}
+		}
+		
     }
 	
 ?>

@@ -42,13 +42,14 @@
 			                                   {
 							                    if (willDelete)
 				                                   {
-								                    swal
-					                                   (
-								                         "Poof! Your imaginary file has been deleted!",
-					                                        {
-						                                        icon: "success",
-													}
-				                                        );
+								                    //swal
+					                                   //(
+								                       //  "Poof! Your imaginary file has been deleted!",
+					                                        //{
+						                                     //   icon: "success",
+													//}
+				                                        //);
+												document.location.href="http://localhost/SiteWebCommercial/Admin/Accueil.php?page="+id;
 							                    }
 					                              else
 					                              {
@@ -83,6 +84,11 @@
 <?php
      if(isset($_GET['page']))
      {
-          echo 'La page est '.$_GET['page']; 
+          require_once('../App/Controller/ClientController.php');
+		$c=new ClientController();
+		$c->supprimer($_GET['page']);
+		echo "<script>document.location.href='http://localhost/SiteWebCommercial/Admin/Accueil.php'</script>";
      }
+	
+	
 ?>
