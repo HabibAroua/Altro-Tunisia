@@ -89,6 +89,4 @@
 		$c->supprimer($_GET['page']);
 		echo "<script>document.location.href='http://localhost/SiteWebCommercial/Admin/Accueil.php'</script>";
      }
-	
-	
 ?>
