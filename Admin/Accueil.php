@@ -146,7 +146,8 @@
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <script src="javascript/Alert.js"></script>
         <?php
-            require_once('../App/View/Client/Gere_client.php');
+            //require_once('../App/View/Client/Gere_client.php');
+			require_once('../App/View/Produit/ajouterProduit.php');
         ?>
     </body>
 </html>

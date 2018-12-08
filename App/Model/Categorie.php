@@ -1,7 +1,7 @@
 <?php
     
     require_once('../App/DataBase/query.php');
-    class Produit
+    class Categorie
     {
         private $id;
         private $libelle;

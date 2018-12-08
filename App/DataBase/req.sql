@@ -61,3 +61,9 @@ alter table reservation add CONSTRAINT fk1 PRIMARY key(login,ref_Prod);
 alter table reservation add CONSTRAINT fk2 FOREIGN key(login) REFERENCES admin(login)
 
 alter table reservation add CONSTRAINT fk3 FOREIGN key(ref_Prod) REFERENCES produit(ref)
+
+insert into categorie VALUES (1,'Laptop');
+
+insert into categorie VALUES(2,'Samart phone');
+
+insert into categorie VALUES(3,'Imprimante');

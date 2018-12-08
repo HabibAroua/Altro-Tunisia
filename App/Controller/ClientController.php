@@ -27,7 +27,6 @@
                 {
                     require_once 'alert.php';
                     show("L\tajout du client effectué avec succes");
-					$testHeader=true;
                 }
             }
         }
