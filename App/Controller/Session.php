@@ -1,4 +1,5 @@
 <?php
+
     class Session
     {
         public function connect($login,$password,$page,$s)
@@ -12,7 +13,7 @@
 		    $_SESSION['login'] = $login;
 		    $_SESSION['password'] = $password;
             // on redirige notre visiteur vers une page de notre section membre
-		    header ("location: $page.php");
+		    header ("location: $page");
         }
         
         public function afterConnection()

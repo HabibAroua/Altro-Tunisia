@@ -53,7 +53,7 @@
             }
             else
             {
-                $this->session->connect($myLogin,$myPassword,'Accueil',3600*48);
+                $this->session->connect($myLogin,$myPassword,'http://localhost/SiteWebCommercial/Public/Accueil.php?page=accueil',3600*48);
             }
         }
         
@@ -136,7 +136,5 @@
                 show("Erreur au niveau du supression");
 			}
 		}
-		
     }
-	
 ?>
