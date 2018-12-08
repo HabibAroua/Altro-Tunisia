@@ -129,9 +129,10 @@
 								</div>
 								<div class="collapse navbar-collapse" id="navbar-collapse-main">
 									  <ul class="nav navbar-nav navbar-right">
-											  <li><a class="active" href="#">Home</a></li>
-												<li><a href="">Mon Profil</a></li>
+											  <li><a class="active" href="#">Acceuil</a></li>
+												<li><a href="">Consulter les produits disponibles</a></li>
 												<li><a href="#">Panier</a></li>
+												<li><a href="#">Paiement</a></li>
 												<li><a href="logout.php">Deconexion</a></li>
 										</ul>
 									  <div style="padding-top:12px;">
@@ -146,20 +147,15 @@
               <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
               <script src="javascript/sweetalert2.js"></script>
               <script src="javascript/Alert.js"></script>
-
 				<?php
 				    if(isset($_GET['page']))
 					{
-						if($_GET['page']=='p1')
+						switch ($_GET['page'])
 						{
-							require_once('../App/View/accueil.php');
-						}
-						else
-						{
-							if($_GET['page']=='profil')
-							{
-								require_once('../App/View/Client/info_client.php');
-							}
+							case  'accueil' : require_once('../App/View/default/accueil.php');
+							break;
+						    case 'profil' : require_once('../App/View/Client/info_client.php');
+							break;
 						}
 					}
 				?>

@@ -30,7 +30,7 @@
 			               (
 						     {
 								title: "Are you sure?",
-								text: "Once deleted, you will not be able to recover this imaginary file!",
+								text: "Voulez vous supprimer cet client ?",
                                         icon: "warning",
                                         buttons: true,
                                         dangerMode: true,
@@ -53,7 +53,7 @@
 							                    }
 					                              else
 					                              {
-						                              swal("Your imaginary file is safe!");
+						                              swal("Suppression annulé");
 											}
 										}
 				          );

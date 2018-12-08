@@ -119,10 +119,3 @@
 			</div>
 		</div>
 	</footer>
-	<?php
-	  if(isset($_GET['message']))
-		{
-			$message=$_GET['message'];
-			echo "<b>$message</b>";
-		}
-	?>
