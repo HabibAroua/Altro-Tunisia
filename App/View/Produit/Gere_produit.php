@@ -12,7 +12,7 @@
 <div style="padding-right: 1px "><div class="padding">
 	<div class="container">
         <center>
-            <h1>Gestion des clients</h1>
+            <h1>Gestion des produits</h1>
         </center>
         <table class="table table-striped table-dark">
             <thead>
@@ -46,7 +46,7 @@
                             echo "<td>$description</td>";
                             echo "<td>$categorie</td>";
                             echo "<td>$date_ajout</td>";
-                            echo "<td>$image</td>";
+                            echo "<td><img src='imageProduit/$image' style='width:50px; height:50px;' /></td>";
                             echo "<td><input type='submit' value='Supprimer'></td>";
                             echo "<td><input type='submit' value='Modifier' onclick='allerModifier();'></td>";
                         echo '</tr>';
