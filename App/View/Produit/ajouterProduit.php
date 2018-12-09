@@ -61,14 +61,17 @@
         }
         else
         {
-            echo "<script>
-                        swal({
-                                title: 'Erreur',
-                                text: 'Les fichiers png ou jpg sont acceptable',
-                                icon: 'warning',
-                                button: 'OK',
-                            });
-                  </script>";
+            echo
+            "<script>
+                swal(
+                        {
+                            title: 'Erreur',
+                            text: 'Les fichiers png ou jpg sont acceptable',
+                            icon: 'warning',
+                            button: 'OK',
+                        }
+                    );
+            </script>";
         }
         
     }
