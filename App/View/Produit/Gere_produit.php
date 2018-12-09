@@ -3,6 +3,12 @@
      $p=new ProduitController();
      $T=$p->getAllProduit();
 ?>
+<script>
+    function allerModifier()
+    {
+        document.location.href="http://localhost/SiteWebCommercial/Admin/Accueil.php?page=modifierProduit";
+    }
+</script>
 <div style="padding-right: 1px "><div class="padding">
 	<div class="container">
         <center>
@@ -41,8 +47,8 @@
                             echo "<td>$categorie</td>";
                             echo "<td>$date_ajout</td>";
                             echo "<td>$image</td>";
-                            echo "<td><input type='submit' value='Modifier'></td>";
                             echo "<td><input type='submit' value='Supprimer'></td>";
+                            echo "<td><input type='submit' value='Modifier' onclick='allerModifier();'></td>";
                         echo '</tr>';
                     }
                 ?>

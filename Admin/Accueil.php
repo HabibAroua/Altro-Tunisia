@@ -156,6 +156,8 @@
 					break;
 				    case 'gereProduit' : require_once('../App/View/Produit/Gere_produit.php');
 					break;
+				    case 'modifierProduit' : require_once('../App/View/Produit/modifierProduit.php');
+					break;
 				}
 			}
         ?>
