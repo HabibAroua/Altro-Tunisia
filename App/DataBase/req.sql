@@ -1,15 +1,5 @@
 create database altro_tunisia ;
 
-create table client 
-(
-    login varchar(50) primary key ,
-    password varchar(255) ,
-    nom varchar(50) ,
-    prenom varchar(50) ,
-    email varchar(50) unique ,
-    date_naissance date ,
-    date_inscription date 
-);
 
 create table client 
 (
@@ -30,7 +20,7 @@ create table categorie
 
 create table produit
 (
-    ref int primary key ,
+    ref varchar(50) primary key ,
     image varchar(250) ,
     libelle varchar(50) ,
     prix int ,
@@ -52,7 +42,7 @@ create table admin
 create table reservation 
 (
     login varchar(50) ,
-    ref_Prod int ,
+    ref_Prod varchar(50) ,
     date_reservation date 
 )
 

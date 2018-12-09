@@ -49,7 +49,7 @@
 						                                     //   icon: "success",
 													//}
 				                                        //);
-												document.location.href="http://localhost/SiteWebCommercial/Admin/Accueil.php?page="+id;
+												document.location.href="http://localhost/SiteWebCommercial/Admin/Accueil.php?page=client&user="+id;
 							                    }
 					                              else
 					                              {
@@ -76,17 +76,18 @@
                               <?php
                               echo '</tr>';
                          }
-                              ?>
+                    ?>
                </tbody>
           </table>
      </div>
 </div>
+
 <?php
-     if(isset($_GET['page']))
+     if(isset($_GET['user']))
      {
           require_once('../App/Controller/ClientController.php');
 		$c=new ClientController();
-		$c->supprimer($_GET['page']);
-		echo "<script>document.location.href='http://localhost/SiteWebCommercial/Admin/Accueil.php'</script>";
+		$c->supprimer($_GET['user']);
+		echo "<script>document.location.href='http://localhost/SiteWebCommercial/Admin/Accueil.php?page=client'</script>";
      }
 ?>

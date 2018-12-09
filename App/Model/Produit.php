@@ -12,14 +12,14 @@
         private $id_cat;
         private $login_admin;
 
-        public function __construct($ref,$image,$libelle,$prix,$description,$date_ajout,$id_cat,$login_admin)
+        public function __construct($ref,$image,$libelle,$prix,$description,$id_cat,$login_admin)
         {
             $this->ref=$ref;
             $this->image=$image;
             $this->libelle=$libelle;
             $this->prix=$prix;
             $this->description=$description;
-            $this->date_ajout=$date_ajout;
+            $this->date_ajout=(new \DateTime())->format('Y-m-d');
             $this->id_cat=$id_cat;
             $this->login_admin=$login_admin;
         }

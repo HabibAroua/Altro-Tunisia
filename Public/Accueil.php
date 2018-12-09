@@ -78,6 +78,10 @@
 					break;
 				}
 			}
+			else
+			{
+				require_once('../App/View/default/accueil.php');
+			}
 		?>
 	</body>
 </html>

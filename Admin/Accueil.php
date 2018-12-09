@@ -126,20 +126,18 @@
 				<div class="collapse navbar-collapse" id="navbar-collapse-main">
 					<ul class="nav navbar-nav navbar-right">
 						<li>
-                            <a class="active" href="#">Home</a>
+                            <a class="active" href="#">Acceuil</a>
                         </li>
-						<li><a href="">Mon Profil</a></li>
-						<li><a href="#">Panier</a></li>
+						<li><a href="Accueil.php?page=client">Gestion des clients</a></li>
+						<li><a href="#">Gestion des produits</a></li>
+						<li><a href="#">Gestion des réservation</a></li>
+						<li><a href="#">Les statistiques</a></li>
+						<li><a href="#">Gestion des fidélité</a></li>
 						<li><a href="logout.php">Deconexion</a></li>
 					</ul>
-					<div style="padding-top:12px;">
-						<input type="search" placeholder="Recherche un produit"><button>Recherche</button>
-                    </div>
                 </div>
             </div>
         </nav>
-        
-
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -147,7 +145,17 @@
         <script src="javascript/Alert.js"></script>
         <?php
             //require_once('../App/View/Client/Gere_client.php');
-			require_once('../App/View/Produit/ajouterProduit.php');
+			
+			if(isset($_GET['page']))
+			{
+				switch($_GET['page'])
+				{
+					case 'client' :require_once('../App/View/Client/Gere_client.php');
+					break;
+				    case 'ajouterProduit' : require_once('../App/View/Produit/ajouterProduit.php');
+					break;
+				}
+			}
         ?>
     </body>
 </html>
