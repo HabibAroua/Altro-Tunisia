@@ -19,6 +19,13 @@
             }
         }
         
+        public function getAllProduit()
+        {
+            $p=new Produit('','','','','','','');
+            $T=$p->allProduit();
+            return $T;
+        }
+        
     }
 
 

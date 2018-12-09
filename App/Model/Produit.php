@@ -126,11 +126,11 @@
         
         public function allProduit()
         {
-            $res=output("select * from produit ");
+            $res=output("select produit.ref , produit.libelle , produit.prix , produit.description , categorie.libelle , produit.date_ajout, produit.image from produit , categorie where categorie.id=produit.id_cat");
             $i=0;
             while($tab=$res->fetch(PDO::FETCH_NUM))
             {
-              $T[$i]=$produit = array('ref'=>$tab[0]."",'image'=>$tab[1]."",'libelle'=>$tab[2]."",'prix'=>$tab[3]."",'description'=>$tab[4]."",'date_ajout'=>$tab[5]."",'id_cat'=>$tab[6]."",'login_admin'=>$tab[7],);
+              $T[$i]=$produit = array('ref'=>$tab[0]."",'libelle'=>$tab[1]."",'prix'=>$tab[2]."",'description'=>$tab[3]."",'categorie'=>$tab[4]."",'date_ajout'=>$tab[5]."",'image'=>$tab[6]."",);
               $i++;
 		 	}
             return $T;

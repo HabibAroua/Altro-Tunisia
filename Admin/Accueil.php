@@ -129,7 +129,7 @@
                             <a class="active" href="#">Acceuil</a>
                         </li>
 						<li><a href="Accueil.php?page=client">Gestion des clients</a></li>
-						<li><a href="#">Gestion des produits</a></li>
+						<li><a href="Accueil.php?page=gereProduit">Gestion des produits</a></li>
 						<li><a href="#">Gestion des réservation</a></li>
 						<li><a href="#">Les statistiques</a></li>
 						<li><a href="#">Gestion des fidélité</a></li>
@@ -153,6 +153,8 @@
 					case 'client' :require_once('../App/View/Client/Gere_client.php');
 					break;
 				    case 'ajouterProduit' : require_once('../App/View/Produit/ajouterProduit.php');
+					break;
+				    case 'gereProduit' : require_once('../App/View/Produit/Gere_produit.php');
 					break;
 				}
 			}
