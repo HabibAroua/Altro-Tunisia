@@ -4,9 +4,9 @@
      $T=$p->getAllProduit();
 ?>
 <script>
-    function allerModifier()
+    function allerModifier(id)
     {
-        document.location.href="http://localhost/SiteWebCommercial/Admin/Accueil.php?page=modifierProduit";
+        document.location.href="http://localhost/SiteWebCommercial/Admin/Accueil.php?page=modifierProduit&produit="+id;
     }
 </script>
 <div style="padding-right: 1px "><div class="padding">
@@ -47,8 +47,11 @@
                             echo "<td>$categorie</td>";
                             echo "<td>$date_ajout</td>";
                             echo "<td><img src='imageProduit/$image' style='width:50px; height:50px;' /></td>";
-                            echo "<td><input type='submit' value='Supprimer'></td>";
-                            echo "<td><input type='submit' value='Modifier' onclick='allerModifier();'></td>";
+                ?>
+            
+                            <td><input type='submit' value='Supprimer'></td>
+                            <td><input type='submit' value='Modifier' onclick="allerModifier('<?php echo $ref ?>');"></td>
+                <?php
                         echo '</tr>';
                     }
                 ?>
