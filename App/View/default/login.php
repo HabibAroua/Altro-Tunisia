@@ -13,7 +13,7 @@
                     <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password" required>
                     <div class="checkbox mb-3">
                         <label>
-                            <input type="checkbox" value="remember-me"> Remember me
+                            <a href="index.php?page=inscription">Inscription</a>
                         </label>
                     </div>
                     <button class="btn btn-lg btn-primary btn-block" type="submit" name="bt_login">
