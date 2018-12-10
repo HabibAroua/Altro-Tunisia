@@ -49,8 +49,8 @@
                             echo "<td><img src='imageProduit/$image' style='width:50px; height:50px;' /></td>";
                 ?>
             
-                            <td><input type='submit' value='Supprimer'></td>
-                            <td><input type='submit' value='Modifier' onclick="allerModifier('<?php echo $ref ?>');"></td>
+                            <td><center><button type="button" class="glyphicon glyphicon-trash"></button></center></td>
+					   <td><center><button type="button" class="glyphicon glyphicon-pencil" onclick="allerModifier('<?php echo $ref ?>');"></button></center></td>
                 <?php
                         echo '</tr>';
                     }
