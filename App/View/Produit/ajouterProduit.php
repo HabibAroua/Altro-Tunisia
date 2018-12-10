@@ -56,6 +56,10 @@
                     {
                         echo 'File Uploaded';
                     }
+                    else
+                    {
+                        echo "<script>alert('echoue');</script>";
+                    }
                 }
             }
         }

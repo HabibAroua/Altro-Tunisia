@@ -121,6 +121,11 @@
             return input("update produit set id_cat='$this->id_cat' where ref='$ref'");
         }
         
+        public function updateImage($ref)
+        {
+            return input("update produit set image='$this->image' where ref='$ref'");
+        }
+        
         public function delete($ref)
         {
             return input("delete table produit where ref='$ref'");

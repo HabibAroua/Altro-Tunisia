@@ -82,5 +82,22 @@
                 error("Erreur au niveau de modification");
             }
         }
+        
+        public function modifierImage($oldRef,$image)
+        {
+            $p=new Produit('','','','','','','');
+            $p->setImage($image);
+            $test=$p->updateImage($oldRef);
+            if($test)
+            {
+                require_once 'alert.php';
+                show("Modification effectué avec succes"); 
+            }
+            else
+            {
+                require_once 'alert.php';
+                error("Erreur au niveau de modification");
+            }
+        }
     }
 ?>

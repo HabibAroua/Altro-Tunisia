@@ -55,7 +55,54 @@
                     }
                 ?>
                 <div class="col-lg-6 col-md-6 col-sm-xs-6">
-                    <?php echo "<center><img style='height:400px; width:400px;' src='imageProduit/$image' /></center>"; ?>
+                    <?php echo "<center><img style='height:316px; width:300px;' src='imageProduit/$image' /></center>"; ?>
+                    <form method="POST" action="" enctype="multipart/form-data">
+                        <input type="file" id="inputFile" class="form-control" placeholder="Saisir File" name="image" required >
+                        <button class="btn btn-lg btn-primary btn-block" type="submit" name="bt_modifier_image">
+                            Modifier l'image
+                        </button>
+                    </form>
+                    <?php
+                        if(isset($_POST['bt_modifier_image']))
+                        {
+                            $fileName = $_FILES['image']['name'];
+                            $tempName = $_FILES['image']['tmp_name'];
+                            $ext = pathinfo($fileName, PATHINFO_EXTENSION);
+                            if($ext=='png' || $ext=='jpg')
+                            {
+                                $pc->modifierImage($_GET['produit'],$fileName);
+                                if(isset($fileName))
+                                {
+                                    if(!empty($fileName))
+                                    {
+                                        $location = "imageProduit/";
+                                        if(move_uploaded_file($tempName, $location.$fileName))
+                                        {
+                                            echo 'File Uploaded';
+                                        }
+                                        else
+                                        {
+                                            echo "<script>alert('echoue');</script>";
+                                        }
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                echo
+                                    "<script>
+                                        swal(
+                                            {
+                                                title: 'Erreur',
+                                                text: 'Les fichiers png ou jpg sont acceptable',
+                                                icon: 'warning',
+                                                button: 'OK',
+                                            }
+                                            );
+                                    </script>";
+                            }
+                        }
+                    ?>
                 </div>
             </div>
         </div>

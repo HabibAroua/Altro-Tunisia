@@ -27,7 +27,7 @@ function error(Mytext)
             {
                 title: "Good job!",
                 text: Mytext,
-                icon: "waring",
+                icon: "warning",
             }
         );
 }
