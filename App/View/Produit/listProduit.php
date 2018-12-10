@@ -5,11 +5,59 @@
 ?>
 <script src="javascript/pagination.js"></script>
 <script>
+	function show(id)
+	{
+		alert("Ajouter au panier "+id);
+	}
+</script>
+<div style="padding-right: 1px "><div class="padding">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-xs-12">
+				<?php
+					echo "<div><div id='wrapper'>"; 
+						echo "<div class='contents'>";
+						        foreach($T as $v)
+						        {
+							        $ref=$v{'ref'};
+                                    $libelle=$v{'libelle'};
+                                    $prix=$v{'prix'};
+                                    $description=$v{'description'};
+                                    $categorie=$v{'categorie'};
+                                    $date_ajout=$v{'date_ajout'};
+                                    $image=$v{'image'};
+					     	        echo "<div>";
+									    echo"<div class='col-md-3'>";
+                                            echo "<div class='card mb-3'>";
+								                echo "<img style='height: 200px; width: 100%; display: block;' src='../Admin/imageProduit/$image' alt='Card image'>";
+                                                echo "<div class='card-body'>";
+							                        echo "<p class='card-text'>Marque:<b>$libelle</b></p>";
+													echo "<p class='card-text'>Date d'ajout : <b>$date_ajout</b></p>";
+													echo "<p class='card-text'>Prix : $prix DT</p>";
+													echo "<p class='card-text'>$description</p>";
+													echo "<div class='card-text'><div class='btn-group' role='group'>";
+                                                    echo "</div></div>";
+                                                echo "</div>";
+                                            echo "</div>";
+											?><button type='button' onclick="show('<?php echo $ref; ?>')" class='glyphicon glyphicon-plus'>Ajouter au panier</button>
+											<?php
+                                        echo "</div>";
+						            echo "</div>";					
+								}
+						echo "</div>";
+					echo "</div></div>";
+					
+				?>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
 	$(document).ready(function()
     {
 		$("#tab").pagination(
 		{
-            items: 5,
+            items: 4,
             contents: 'contents',
             previous: 'Previous',
             next: 'Next',
@@ -17,67 +65,3 @@
         });
     });
 </script>
-<div style="padding-right: 1px "><div class="padding">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-6 col-md-3 col-sm-xs-12">
-                <center><h1>List Produit</h1></center>
-				<?php
-					echo "<div id='wrapper'>";
-						echo "<div class='contents'>";
-						    foreach($T as $v)
-						    {
-							    $ref=$v{'ref'};
-                                $libelle=$v{'libelle'};
-                                $prix=$v{'prix'};
-                                $description=$v{'description'};
-                                $categorie=$v{'categorie'};
-                                $date_ajout=$v{'date_ajout'};
-                                $image=$v{'image'};
-					     	    echo "<div>";
-							        echo "<table>";
-								        echo "<tr>";
-									        echo "<td>Réference :</td>";
-										    echo "<td>$ref</td>";
-									    echo "</tr>";
-									    echo "<tr>";
-									        echo "<td>Libelle :</td>";
-										    echo "<td>$libelle</td>";
-									    echo "</tr>";
-									    echo "<tr>";
-									        echo "<td>Description :</td>";
-										    echo "<td>$description</td>";
-									    echo "</tr>";
-									    echo "<tr>";
-									        echo "<td>Categorie :</td>";
-										    echo "<td>$categorie</td>";
-									    echo "</tr>";
-									    echo "<tr>";
-									        echo "<td>Date d'ajout :</td>";
-										    echo "<td>$date_ajout</td>";
-									    echo "</tr>";
-								    echo "</table>";
-									echo "<a href='../Admin/imageProduit/$image'><img style='height:70px; width:70px;' src='../Admin/imageProduit/$image'/></a>";
-									echo "<button>Ajouter au panier</button>";
-								echo "</div>";
-							}
-						echo "</div>";
-					echo "</div>";
-				?>
-            </div>
-			<div class="col-lg-6 col-md-3 col-sm-xs-12">
-				<div id="container">
-		            <?php
-					    foreach($T as $v)
-						{
-							$image=$v{'image'};
-							echo "<img class='slides' src='imageProduit/$image";
-						}
-					?>
-			        <button class="btn"  onclick="plusIndex(-1);" id="btn1">&#10094;</button>
-			        <button class="btn"  onclick="plusIndex(1);" id="btn2">&#10095;</button>
-		        </div>
-			</div>
-        </div>
-    </div>
-</div>

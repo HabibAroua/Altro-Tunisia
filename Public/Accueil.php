@@ -7,12 +7,15 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Bootstrap Landing Page Website Tutorial</title>
+        <title>Acceuil</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="css/styleClient.css" rel="stylesheet" />
 		<link href="css/pagination.css" rel="stylesheet" />
+		<style>
+			
+		</style>
 		<style>
 			#container
 			{
@@ -120,7 +123,7 @@
 					break;
 				    case 'paiement' : require_once('../App/View/Reservation/paiement.php');
 					break;
-				    case :'rechercheProduit' : require_once('../App/View/Produit/rechercheProduit.php');
+				    case 'rechercheProduit' : require_once('../App/View/Produit/rechercheProduit.php');
 					break;
 				    default : require_once('../App/View/default/accueil.php');
 					break;
