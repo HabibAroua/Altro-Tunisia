@@ -44,7 +44,7 @@
                     </form>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-xs-6">
-                    <?php echo "<img src='imageProduit/$image' />"; ?>
+                    <?php echo "<center><img style='height:400px; width:400px;' src='imageProduit/$image' /></center>"; ?>
                 </div>
             </div>
         </div>
