@@ -37,7 +37,7 @@
 
         public function getImage()
         {
-            return $this->$image;
+            return $this->image;
         }
         
         public function setImage($image)
@@ -62,7 +62,7 @@
         
         public function setPrix($prix)
         {
-            $thsi->prix=$prix;
+            $this->prix=$prix;
         }
         
         public function getDescription()

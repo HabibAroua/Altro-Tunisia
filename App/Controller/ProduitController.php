@@ -26,6 +26,26 @@
             return $T;
         }
         
+        public function findProduitByRef($ref)
+        {
+            $p=new Produit('','','','','','','');
+            $T=$p->allProduit();
+            foreach ($T as $v)
+            {
+                if($v{'ref'}==$ref)
+                {
+                    $p->setRef($v{'ref'});
+                    $p->setImage($v{'image'});
+                    $p->setLibelle($v{'libelle'});
+                    $p->setPrix($v{'prix'});
+                    echo 
+                    $p->setDescription($v{'description'});
+                    break;
+                }
+            }
+            return $p;
+        }
+        
     }
 
 

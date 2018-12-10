@@ -1,25 +1,37 @@
+<?php
+    require_once ('../App/Controller/CategorieController.php');
+    $c=new CategorieController();
+    require_once ('../App/Controller/ProduitController.php');
+    $pc=new ProduitController();
+    if(isset($_GET['produit']))
+        $p=$pc->findProduitByRef($_GET['produit']);
+        $image=$p->getImage();
+?>
 <div style="padding-right: 1px ">
     <div class="padding">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-xs-12">
+                <div class="col-lg-6 col-md-6 col-sm-xs-6">
                     <form class="form-signin" method="POST" action="" enctype="multipart/form-data">
                         <center>
                             <h1 class="h3 mb-3 font-weight-normal">Modifier Produit</h1>
                         </center>
-                        <input type="text" id="inputref" class="form-control" placeholder="saisir la reférence" name="reference" value="<?php if(isset($_POST['reference'])) echo $_POST['reference'] ; ?>" required>
-                        <input type="file" id="inputFile" class="form-control" placeholder="Saisir File" name="image" required >
-                        <input type="text" id="inputText" class="form-control" placeholder="saisir libeille" name="libelle" required value="<?php if(isset($_POST['libelle'])) echo $_POST['libelle'] ; ?>">
-                        <input type="text" id="inputText" class="form-control" placeholder="saisir prix" name="prix" required value="<?php if(isset($_POST['prix'])) echo $_POST['prix'] ; ?>">
-                        <textarea name="description" style="width:1140px; height:100px;" required><?php if(isset($_POST['description'])) echo $_POST['description'] ; ?> </textarea>
-                        <br>
+                        <input type="text" id="inputref" class="form-control" placeholder="saisir la reférence" name="reference" value="<?php echo $p->getRef();  ?>" required>
+                        <input type="text" id="inputText" class="form-control" placeholder="saisir libeille" name="libelle" required value="<?php echo $p->getLibelle();  ?>"">
+                        <input type="text" id="inputText" class="form-control" placeholder="saisir prix" name="prix" required value="<?php echo $p->getPrix();  ?>">
+                        <textarea name="description" style="width:556px; height:100px;" required><?php echo $p->getDescription().' '.$p->getImage();  ?> </textarea>
+                        <button class="btn btn-lg btn-primary btn-block" type="submit" name="bt_ajouter_produit">
+                            Modifier
+                        </button>
+
+                    </form>
+                    <br>
+                    <form>
                         <select name='inputCategorie'>
                             <?php
-                            require_once ('../App/Controller/CategorieController.php');
-                            $c=new CategorieController();
                             $T=$c->getAllCategorie();
-                            foreach($T as $v) {
-
+                            foreach($T as $v)
+                            {
                                 $id = $v{'id'};
                                 $libelle = $v{'libelle'};
                                 echo "<option value='$id'>$libelle</option>";
@@ -27,10 +39,12 @@
                             ?>
                         </select>
                         <button class="btn btn-lg btn-primary btn-block" type="submit" name="bt_ajouter_produit">
-                            Ajouter
+                            Modifier la categorie
                         </button>
-
                     </form>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-xs-6">
+                    <?php echo "<img src='imageProduit/$image' />"; ?>
                 </div>
             </div>
         </div>
