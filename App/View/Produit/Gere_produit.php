@@ -27,10 +27,10 @@
                     <th scope="col">Supprimer</th>
                     <th scope="col">Modifier</th>
 				<th scope="col"><a href="Accueil.php?page=ajouterProduit"><button type="button" class="glyphicon glyphicon-plus"></button></a></th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
+               </tr>
+          </thead>
+          <tbody>
+               <?php
                     foreach($T as $v)
                     {
                         $ref=$v{'ref'};
@@ -41,22 +41,22 @@
                         $date_ajout=$v{'date_ajout'};
                         $image=$v{'image'};
                         echo '<tr>';
-                            echo "<td>$ref</td>";
-                            echo "<td>$libelle</td>";
-                            echo "<td>$prix</td>";
-                            echo "<td>$description</td>";
-                            echo "<td>$categorie</td>";
-                            echo "<td>$date_ajout</td>";
-                            echo "<td><img src='imageProduit/$image' style='width:50px; height:50px;' /></td>";
-                ?>
+                              echo "<td>$ref</td>";
+                              echo "<td>$libelle</td>";
+                              echo "<td>$prix</td>";
+                              echo "<td>$description</td>";
+                              echo "<td>$categorie</td>";
+                              echo "<td>$date_ajout</td>";
+                              echo "<td><img src='imageProduit/$image' style='width:50px; height:50px;' /></td>";
+               ?>
             
-                            <td><center><button type="button" class="glyphicon glyphicon-trash"></button></center></td>
-					   <td><center><button type="button" class="glyphicon glyphicon-pencil" onclick="allerModifier('<?php echo $ref ?>');"></button></center></td>
-                <?php
+                             <td><center><button type="button" class="glyphicon glyphicon-trash"></button></center></td>
+					    <td><center><button type="button" class="glyphicon glyphicon-pencil" onclick="allerModifier('<?php echo $ref ?>');"></button></center></td>
+               <?php
                         echo '</tr>';
                     }
-                ?>
-            </tbody>
+               ?>
+          </tbody>
         </table>
     </div>
 </div>
