@@ -62,7 +62,24 @@
             else
             {
                 require_once 'alert.php';
-                error("Erreur au niveau du suppression");
+                error("Erreur au niveau de modification");
+            }
+        }
+        
+        public function modifierCategorie($oldRef,$id_cat)
+        {
+            $p=new Produit('','','','','','','');
+            $p->setId_cat($id_cat);
+            $test=$p->updateCategorie($oldRef);
+            if($test)
+            {
+                require_once 'alert.php';
+                show("Modification effectué avec succes"); 
+            }
+            else
+            {
+                require_once 'alert.php';
+                error("Erreur au niveau de modification");
             }
         }
     }

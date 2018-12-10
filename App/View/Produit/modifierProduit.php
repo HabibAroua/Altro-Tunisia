@@ -27,12 +27,11 @@
                     <?php
                             if(isset($_POST['bt_modifier_produit']))
                             {
-                                $pc=new ProduitController();
                                 $pc->modifierProduit($_GET['produit'],$_POST['reference'],$_POST['libelle'],$_POST['prix'],$_POST['description']);   
                             }
                         ?>
                     <br>
-                    <form>
+                    <form method="POST" action="">
                         <select name='inputCategorie'>
                             <?php
                             $T=$c->getAllCategorie();
@@ -44,11 +43,17 @@
                             }
                             ?>
                         </select>
-                        <button class="btn btn-lg btn-primary btn-block" type="submit" name="bt_ajouter_produit">
+                        <button class="btn btn-lg btn-primary btn-block" type="submit" name="bt_modifier_categorie">
                             Modifier la categorie
                         </button>
                     </form>
                 </div>
+                <?php
+                    if(isset($_POST['bt_modifier_categorie']))
+                    {
+                        $pc->modifierCategorie($_GET['produit'],$_POST['inputCategorie']);
+                    }
+                ?>
                 <div class="col-lg-6 col-md-6 col-sm-xs-6">
                     <?php echo "<center><img style='height:400px; width:400px;' src='imageProduit/$image' /></center>"; ?>
                 </div>

@@ -105,10 +105,7 @@
             $this->login_admin=$login_admin;
         }
         
-        
-        
         //Crud
-        
         public function add()
         {
             return input("insert into produit values('$this->ref','$this->image','$this->libelle','$this->prix','$this->description','$this->date_ajout','$this->id_cat','$this->login_admin')");
@@ -117,6 +114,11 @@
         public function update($ref)
         {
             return input("update produit set ref='$this->ref' ,  libelle='$this->libelle' , prix='$this->prix' , description='$this->description' where ref='$ref'");
+        }
+        
+        public function updateCategorie($ref)
+        {
+            return input("update produit set id_cat='$this->id_cat' where ref='$ref'");
         }
         
         public function delete($ref)
