@@ -66,17 +66,17 @@
 				?>
             </div>
 			<div class="col-lg-6 col-md-3 col-sm-xs-12">
-				dqdqdqd
-				dq
-				dq
-				dq
-				
-				dqdqd
-				qd
-				qd
-				qdq
-				dq
-				dq
+				<div id="container">
+		            <?php
+					    foreach($T as $v)
+						{
+							$image=$v{'image'};
+							echo "<img class='slides' src='imageProduit/$image";
+						}
+					?>
+			        <button class="btn"  onclick="plusIndex(-1);" id="btn1">&#10094;</button>
+			        <button class="btn"  onclick="plusIndex(1);" id="btn2">&#10095;</button>
+		        </div>
 			</div>
         </div>
     </div>

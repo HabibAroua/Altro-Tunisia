@@ -135,4 +135,16 @@
 		 	}
             return $T;
         }
+        
+        public function findProduitByName($name)
+        {
+            $res=output("select produit.ref , produit.libelle , produit.prix , produit.description , categorie.libelle , produit.date_ajout, produit.image from produit , categorie where categorie.id=produit.id_cat  and produit.libelle='$name'");
+            $i=0;
+            while($tab=$res->fetch(PDO::FETCH_NUM))
+            {
+              $T[$i]=$produit = array('ref'=>$tab[0]."",'libelle'=>$tab[1]."",'prix'=>$tab[2]."",'description'=>$tab[3]."",'categorie'=>$tab[4]."",'date_ajout'=>$tab[5]."",'image'=>$tab[6]."",);
+              $i++;
+		 	}
+            return $T;
+        }
     }

@@ -14,6 +14,51 @@
         <link href="css/styleClient.css" rel="stylesheet" />
 		<link href="css/pagination.css" rel="stylesheet" />
 		<style>
+			#container
+			{
+				width: 80%;
+	            height: 450px;
+	            border: 1px solid black;
+	            margin: 0 auto;
+			}
+			
+			#container>img
+            {
+				width: 1080px;
+	            height: 70%;
+	            position: absolute;
+			}
+
+            #container>.btn
+            {
+				position: absolute;
+	            width: 50px;
+	            height: 50px;
+	            border: none;
+	            border-radius: 25px;
+	            top: 200px;
+	            background: black;
+	            color: white;
+				font-size: 20px;
+			}
+			
+			#container>#btn1:hover
+            {
+				box-shadow: 10px 0px 20px 10px black;
+			}
+			
+			#container>#btn2:hover
+            {
+				box-shadow: -10px 0px 20px 10px black;
+			}
+			
+			#container>#btn2
+            {
+				position: relative;
+    	        float: right;
+			}
+		</style>
+		<style>
 			#home
             {
 				background: url(picture/mountains.jpeg) no-repeat center center fixed;
@@ -74,6 +119,8 @@
 				    case 'panier' : require_once('../App/View/Panier/panier.php');
 					break;
 				    case 'paiement' : require_once('../App/View/Reservation/paiement.php');
+					break;
+				    case :'rechercheProduit' : require_once('../App/View/Produit/rechercheProduit.php');
 					break;
 				    default : require_once('../App/View/default/accueil.php');
 					break;
