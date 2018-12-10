@@ -22,10 +22,11 @@
                     <th scope="col">Prix</th>
                     <th scope="col">Description</th>
                     <th scope="col">Categorie</th>
-                    <th scope="col">Date ajout</th>
+                    <th scope="col">Ajouté à</th>
                     <th scope="col">Image</th>
                     <th scope="col">Supprimer</th>
                     <th scope="col">Modifier</th>
+				<th scope="col"><a href="Accueil.php?page=ajouterProduit"><button type="button" class="glyphicon glyphicon-plus"></button></a></th>
                 </tr>
             </thead>
             <tbody>
