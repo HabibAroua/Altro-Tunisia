@@ -116,7 +116,7 @@
         
         public function update($ref)
         {
-            return input("update produit set ref='$this->ref' , image='$this->image' , libelle='$this->libelle' , prix='$this->prix' , description='$this->description' , date_ajout='$this->date_ajout' , id_cat='$this->id_cat' , login_admin='$this->login_admin'  where ref='$ref'");
+            return input("update produit set ref='$this->ref' ,  libelle='$this->libelle' , prix='$this->prix' , description='$this->description' where ref='$ref'");
         }
         
         public function delete($ref)

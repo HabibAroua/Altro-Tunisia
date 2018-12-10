@@ -20,6 +20,18 @@ function basicMessage(Mytext)
         );
 }
 
+function error(Mytext)
+{
+    swal
+        (
+            {
+                title: "Good job!",
+                text: Mytext,
+                icon: "waring",
+            }
+        );
+}
+
 function errorMessage(title,text,footer)
 {
     swal

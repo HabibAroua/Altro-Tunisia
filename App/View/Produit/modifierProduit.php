@@ -12,19 +12,25 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-xs-6">
-                    <form class="form-signin" method="POST" action="" enctype="multipart/form-data">
+                    <form class="form-signin" method="POST" action="">
                         <center>
                             <h1 class="h3 mb-3 font-weight-normal">Modifier Produit</h1>
                         </center>
                         <input type="text" id="inputref" class="form-control" placeholder="saisir la reférence" name="reference" value="<?php echo $p->getRef();  ?>" required>
                         <input type="text" id="inputText" class="form-control" placeholder="saisir libeille" name="libelle" required value="<?php echo $p->getLibelle();  ?>"">
                         <input type="text" id="inputText" class="form-control" placeholder="saisir prix" name="prix" required value="<?php echo $p->getPrix();  ?>">
-                        <textarea name="description" style="width:556px; height:100px;" required><?php echo $p->getDescription().' '.$p->getImage();  ?> </textarea>
-                        <button class="btn btn-lg btn-primary btn-block" type="submit" name="bt_ajouter_produit">
+                        <textarea name="description" style="width:556px; height:100px;" required><?php echo $p->getDescription(); ?> </textarea>
+                        <button class="btn btn-lg btn-primary btn-block" type="submit" name="bt_modifier_produit">
                             Modifier
                         </button>
-
                     </form>
+                    <?php
+                            if(isset($_POST['bt_modifier_produit']))
+                            {
+                                $pc=new ProduitController();
+                                $pc->modifierProduit($_GET['produit'],$_POST['reference'],$_POST['libelle'],$_POST['prix'],$_POST['description']);   
+                            }
+                        ?>
                     <br>
                     <form>
                         <select name='inputCategorie'>

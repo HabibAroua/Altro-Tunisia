@@ -46,7 +46,24 @@
             return $p;
         }
         
+        public function modifierProduit($Oldref,$newRef,$libelle,$prix,$description)
+        {
+            $p=new Produit('','','','','','','');
+            $p->setRef($newRef);
+            $p->setLibelle($libelle);
+            $p->setPrix($prix);
+            $p->setDescription($description);
+            $test=$p->update($newRef);
+            if($test)
+            {
+                require_once 'alert.php';
+                show("Modification effectué avec succes");   
+            }
+            else
+            {
+                require_once 'alert.php';
+                error("Erreur au niveau du suppression");
+            }
+        }
     }
-
-
 ?>
