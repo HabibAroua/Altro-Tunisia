@@ -21,14 +21,14 @@
         
         public function getAllProduit()
         {
-            $p=new Produit('','','','','','','');
+            $p=new Produit('','','','','','','','');
             $T=$p->allProduit();
             return $T;
         }
         
         public function findProduitByRef($ref)
         {
-            $p=new Produit('','','','','','','');
+            $p=new Produit('','','','','','','','');
             $T=$p->allProduit();
             foreach ($T as $v)
             {
@@ -48,7 +48,7 @@
         
         public function modifierProduit($Oldref,$newRef,$libelle,$prix,$description)
         {
-            $p=new Produit('','','','','','','');
+            $p=new Produit('','','','','','','','');
             $p->setRef($newRef);
             $p->setLibelle($libelle);
             $p->setPrix($prix);
@@ -68,7 +68,7 @@
         
         public function modifierCategorie($oldRef,$id_cat)
         {
-            $p=new Produit('','','','','','','');
+            $p=new Produit('','','','','','','','');
             $p->setId_cat($id_cat);
             $test=$p->updateCategorie($oldRef);
             if($test)
@@ -85,7 +85,7 @@
         
         public function modifierImage($oldRef,$image)
         {
-            $p=new Produit('','','','','','','');
+            $p=new Produit('','','','','','','','');
             $p->setImage($image);
             $test=$p->updateImage($oldRef);
             if($test)

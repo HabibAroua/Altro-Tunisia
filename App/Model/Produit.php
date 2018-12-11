@@ -11,8 +11,9 @@
         private $date_ajout;
         private $id_cat;
         private $login_admin;
+        private $quantite;
 
-        public function __construct($ref,$image,$libelle,$prix,$description,$id_cat,$login_admin)
+        public function __construct($ref,$image,$libelle,$prix,$description,$id_cat,$login_admin,$quantite)
         {
             $this->ref=$ref;
             $this->image=$image;
@@ -22,6 +23,7 @@
             $this->date_ajout=(new \DateTime())->format('Y-m-d');
             $this->id_cat=$id_cat;
             $this->login_admin=$login_admin;
+            $this->quantite=$quantite;
         }
         
         public function getRef()
@@ -105,15 +107,25 @@
             $this->login_admin=$login_admin;
         }
         
+        public function getQuantite()
+        {
+            return $this->quantite;
+        }
+        
+        public function setQuantite($quantie)
+        {
+            $this->quantite=$quantie;
+        }
+        
         //Crud
         public function add()
         {
-            return input("insert into produit values('$this->ref','$this->image','$this->libelle','$this->prix','$this->description','$this->date_ajout','$this->id_cat','$this->login_admin')");
+            return input("insert into produit values('$this->ref','$this->image','$this->libelle','$this->prix','$this->description','$this->date_ajout','$this->id_cat','$this->login_admin','$this->quantite')");
         }
         
         public function update($ref)
         {
-            return input("update produit set ref='$this->ref' ,  libelle='$this->libelle' , prix='$this->prix' , description='$this->description' where ref='$ref'");
+            return input("update produit set ref='$this->ref' ,  libelle='$this->libelle' , prix='$this->prix' , description='$this->description' , quantite='$this->quantite' where ref='$ref'");
         }
         
         public function updateCategorie($ref)
@@ -133,11 +145,11 @@
         
         public function allProduit()
         {
-            $res=output("select produit.ref , produit.libelle , produit.prix , produit.description , categorie.libelle , produit.date_ajout, produit.image from produit , categorie where categorie.id=produit.id_cat");
+            $res=output("select produit.ref , produit.libelle , produit.prix , produit.description , categorie.libelle , produit.date_ajout, produit.quantite,produit.image from produit , categorie where categorie.id=produit.id_cat");
             $i=0;
             while($tab=$res->fetch(PDO::FETCH_NUM))
             {
-              $T[$i]=$produit = array('ref'=>$tab[0]."",'libelle'=>$tab[1]."",'prix'=>$tab[2]."",'description'=>$tab[3]."",'categorie'=>$tab[4]."",'date_ajout'=>$tab[5]."",'image'=>$tab[6]."",);
+              $T[$i]=$produit = array('ref'=>$tab[0]."",'libelle'=>$tab[1]."",'prix'=>$tab[2]."",'description'=>$tab[3]."",'categorie'=>$tab[4]."",'date_ajout'=>$tab[5]."",'quantite'=>$tab[6]."",'image'=>$tab[7]."",);
               $i++;
 		 	}
             return $T;
@@ -149,8 +161,8 @@
             $i=0;
             while($tab=$res->fetch(PDO::FETCH_NUM))
             {
-              $T[$i]=$produit = array('ref'=>$tab[0]."",'libelle'=>$tab[1]."",'prix'=>$tab[2]."",'description'=>$tab[3]."",'categorie'=>$tab[4]."",'date_ajout'=>$tab[5]."",'image'=>$tab[6]."",);
-              $i++;
+                $T[$i]=$produit = array('ref'=>$tab[0]."",'libelle'=>$tab[1]."",'prix'=>$tab[2]."",'description'=>$tab[3]."",'categorie'=>$tab[4]."",'date_ajout'=>$tab[5]."",'quantite'=>$tab[6]."",'image'=>$tab[7]."",);
+                $i++;
 		 	}
             return $T;
         }
