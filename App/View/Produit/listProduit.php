@@ -8,7 +8,6 @@
 	function show(id)
 	{
 		alert('Vous ajoutez '+id);
-		//document.location.href="http://localhost/SiteWebCommercial/Public/Accueil.php?page=produit&panier="+id;
 		$('#myStyle').load('Accueil.php?page=produit&panier=' + id);
 	}
 </script>

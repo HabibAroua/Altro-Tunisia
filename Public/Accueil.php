@@ -85,7 +85,7 @@
 		    $nbPanier=0;
 			if(isset($_GET['panier']))
 			{
-				$nbPanier++;
+				echo "<script>alert('Hello world');</script>";
 			}
 		?>
 		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
