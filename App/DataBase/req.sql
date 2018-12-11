@@ -57,3 +57,5 @@ insert into categorie VALUES (1,'Laptop');
 insert into categorie VALUES(2,'Samart phone');
 
 insert into categorie VALUES(3,'Imprimante');
+
+alter table produit add COLUMN quantite int;
