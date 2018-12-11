@@ -135,6 +135,8 @@
 					break;
 				    case 'rechercheProduit' : require_once('../App/View/Produit/rechercheProduit.php');
 					break;
+				    case 'acheter' : require_once('../App/View/Panier/Acheter.php');
+					break;
 				    default : require_once('../App/View/default/accueil.php');
 					break;
 				}
