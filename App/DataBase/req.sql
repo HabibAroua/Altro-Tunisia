@@ -60,3 +60,5 @@ insert into categorie VALUES(3,'Imprimante');
 
 alter table produit add COLUMN quantite int;
 
+alter table reservation add COLUMN nb int UNIQUE;
+
