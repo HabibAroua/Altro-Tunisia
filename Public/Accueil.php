@@ -1,5 +1,4 @@
 <?php
-    echo 'Bienvenue';
     require_once('../App/Controller/ClientController.php');
 	$c=new ClientController();
     $c->IsLogin();
@@ -85,6 +84,7 @@
 		    $nbPanier=0;
 			if(isset($_GET['panier']))
 			{
+				$panier=$_GET['panier'];
 				echo "<script>alert('Hello world');</script>";
 			}
 		?>

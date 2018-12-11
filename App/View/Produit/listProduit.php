@@ -7,7 +7,6 @@
 <script>
 	function show(id)
 	{
-		alert('Vous ajoutez '+id);
 		$('#myStyle').load('Accueil.php?page=produit&panier=' + id);
 	}
 </script>
