@@ -26,6 +26,7 @@
                                     $categorie=$v{'categorie'};
                                     $date_ajout=$v{'date_ajout'};
                                     $image=$v{'image'};
+									$quantite=$v{'quantite'};
 					     	        echo "<div>";
 									    echo"<div class='col-md-3'>";
                                             echo "<div class='card mb-3'>";
