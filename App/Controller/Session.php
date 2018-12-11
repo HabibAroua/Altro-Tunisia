@@ -24,7 +24,6 @@
             {
                 // On teste pour voir si nos variables ont bien été enregistrées
 	            // On affiche un lien pour fermer notre session
-	            echo '<a href="logout.php">Déconnection</a>';
             }
             else
             {

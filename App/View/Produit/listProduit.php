@@ -7,7 +7,9 @@
 <script>
 	function show(id)
 	{
-		document.location.href="http://localhost/SiteWebCommercial/Public/Accueil.php?page=produit&panier="+id;
+		alert('Vous ajoutez '+id);
+		//document.location.href="http://localhost/SiteWebCommercial/Public/Accueil.php?page=produit&panier="+id;
+		$('#myStyle').load('Accueil.php?page=produit&panier=' + id);
 	}
 </script>
 <div style="padding-right: 1px "><div class="padding">
@@ -64,3 +66,5 @@
         });
     });
 </script>
+<div id='myStyle'>
+</div>
