@@ -7,7 +7,7 @@
 <script>
 	function show(id)
 	{
-		alert("Ajouter au panier "+id);
+		document.location.href="http://localhost/SiteWebCommercial/Public/Accueil.php?page=produit&panier="+id;
 	}
 </script>
 <div style="padding-right: 1px "><div class="padding">

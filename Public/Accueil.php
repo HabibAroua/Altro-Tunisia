@@ -81,6 +81,13 @@
         <script src="javascript/Alert.js"></script>
     </head>
 	<body>
+		<?php
+		    $nbPanier=0;
+			if(isset($_GET['panier']))
+			{
+				$nbPanier++;
+			}
+		?>
 		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 			<div class="container-fluid">
 				<div class="navbar-header">
@@ -97,7 +104,7 @@
 						    <li><a class="active" href="Accueil.php?page=accueil">Acceuil</a></li>
 							<li><a class="active" href="Accueil.php?page=profil">Profil</a></li>
 							<li><a href="Accueil.php?page=produit">Consulter les produits disponibles</a></li>
-							<li><a href="Accueil.php?page=panier">Panier : 0</a></li>
+							<li><a href="Accueil.php?page=panier">Panier : <?php echo $nbPanier; ?></a></li>
 							<li><a href="Accueil.php?page=paiement">Paiement</a></li>
 							<li><a href="logout.php">Deconexion</a></li>
 						</ul>
