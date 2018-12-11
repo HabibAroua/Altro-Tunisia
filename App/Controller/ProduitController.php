@@ -3,9 +3,9 @@
     
     class ProduitController
     {
-        public function ajouterProduit($ref,$image,$libelle,$prix,$description,$id_cat,$login_admin)
+        public function ajouterProduit($ref,$image,$libelle,$prix,$description,$id_cat,$login_admin,$quantite)
         {
-            $p=new Produit($ref,$image,$libelle,$prix,$description,$id_cat,$login_admin);
+            $p=new Produit($ref,$image,$libelle,$prix,$description,$id_cat,$login_admin,$quabtite);
             $test=$p->add();
             if($test)
             {
@@ -37,22 +37,23 @@
                     $p->setRef($v{'ref'});
                     $p->setImage($v{'image'});
                     $p->setLibelle($v{'libelle'});
-                    $p->setPrix($v{'prix'});
-                    echo 
+                    $p->setPrix($v{'prix'}); 
                     $p->setDescription($v{'description'});
+                    $p->setQuantite($v{'quantite'});
                     break;
                 }
             }
             return $p;
         }
         
-        public function modifierProduit($Oldref,$newRef,$libelle,$prix,$description)
+        public function modifierProduit($Oldref,$newRef,$libelle,$prix,$description,$quantite)
         {
             $p=new Produit('','','','','','','','');
             $p->setRef($newRef);
             $p->setLibelle($libelle);
             $p->setPrix($prix);
             $p->setDescription($description);
+            $p->setQuantite($quantite);
             $test=$p->update($newRef);
             if($test)
             {

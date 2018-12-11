@@ -12,6 +12,8 @@
                         <input type="text" id="inputText" class="form-control" placeholder="saisir libeille" name="libelle" required value="<?php if(isset($_POST['libelle'])) echo $_POST['libelle'] ; ?>">
                         <input type="text" id="inputText" class="form-control" placeholder="saisir prix" name="prix" required value="<?php if(isset($_POST['prix'])) echo $_POST['prix'] ; ?>">
                         <textarea name="description" style="width:1140px; height:100px;" required><?php if(isset($_POST['description'])) echo $_POST['description'] ; ?> </textarea>
+                        <input type="number" min="1" id="inputText" class="form-control" placeholder="saisir quantité" name="quantite" required value="<?php if (isset($_POST['quantite'])) echo $p->getQuantite();  ?>">
+
                         <br>
                         <select name='inputCategorie'>
                             <?php
@@ -46,7 +48,7 @@
         {
             require_once('../App/Controller/ProduitController.php');
             $p=new ProduitController();
-            $p->ajouterProduit($_POST['reference'],$fileName,$_POST['libelle'],$_POST['prix'],$_POST['description'],$_POST['inputCategorie'],null);
+            $p->ajouterProduit($_POST['reference'],$fileName,$_POST['libelle'],$_POST['prix'],$_POST['description'],$_POST['inputCategorie'],null,$_POST['quantite']);
             if(isset($fileName))
             {
                 if(!empty($fileName))

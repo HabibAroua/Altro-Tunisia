@@ -20,6 +20,7 @@
                         <input type="text" id="inputText" class="form-control" placeholder="saisir libeille" name="libelle" required value="<?php echo $p->getLibelle();  ?>"">
                         <input type="text" id="inputText" class="form-control" placeholder="saisir prix" name="prix" required value="<?php echo $p->getPrix();  ?>">
                         <textarea name="description" style="width:556px; height:100px;" required><?php echo $p->getDescription(); ?> </textarea>
+                        <input type="text" id="inputText" class="form-control" placeholder="saisir quantité" name="quantite" required value="<?php echo $p->getQuantite();  ?>">
                         <button class="btn btn-lg btn-primary btn-block" type="submit" name="bt_modifier_produit">
                             Modifier
                         </button>
@@ -27,7 +28,7 @@
                     <?php
                             if(isset($_POST['bt_modifier_produit']))
                             {
-                                $pc->modifierProduit($_GET['produit'],$_POST['reference'],$_POST['libelle'],$_POST['prix'],$_POST['description']);   
+                                $pc->modifierProduit($_GET['produit'],$_POST['reference'],$_POST['libelle'],$_POST['prix'],$_POST['description'],$_POST['quantite']);   
                             }
                         ?>
                     <br>
