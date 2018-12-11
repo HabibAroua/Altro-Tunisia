@@ -23,6 +23,7 @@
                     <th scope="col">Description</th>
                     <th scope="col">Categorie</th>
                     <th scope="col">Ajouté à</th>
+				<th scope="col">Quantité</th>
                     <th scope="col">Image</th>
                     <th scope="col">Supprimer</th>
                     <th scope="col">Modifier</th>
@@ -40,6 +41,7 @@
                         $categorie=$v{'categorie'};
                         $date_ajout=$v{'date_ajout'};
                         $image=$v{'image'};
+				    $quantite=$v{'quantite'};
                         echo '<tr>';
                               echo "<td>$ref</td>";
                               echo "<td>$libelle</td>";
@@ -47,6 +49,7 @@
                               echo "<td>$description</td>";
                               echo "<td>$categorie</td>";
                               echo "<td>$date_ajout</td>";
+						echo "<td>$quantite</td>";
                               echo "<td><img src='imageProduit/$image' style='width:50px; height:50px;' /></td>";
                ?>
             
@@ -58,6 +61,5 @@
                ?>
           </tbody>
      </table>
-	   
     </div>
 </div>

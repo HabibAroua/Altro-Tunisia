@@ -109,7 +109,10 @@
 							<li><a href="logout.php">Deconexion</a></li>
 						</ul>
 						<div style="padding-top:12px;">
-							<input type="search" placeholder="Recherche un produit"><button>Recherche</button>
+							<form action="Accueil.php?page=rechercheProduit" method="POST">
+								<input type="search" name="txtCherche" placeholder="Recherche un produit">
+								<button>Recherche</button>
+							</form>
 						</div>
 					</div>
 			    </div>

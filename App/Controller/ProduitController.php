@@ -26,6 +26,13 @@
             return $T;
         }
         
+        public function findProduit($n)
+        {
+            $p=new Produit('','','','','','','','');
+            $T=$p->findProduitByName($n);
+            return $T;
+        }
+        
         public function findProduitByRef($ref)
         {
             $p=new Produit('','','','','','','','');

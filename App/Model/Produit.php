@@ -157,7 +157,7 @@
         
         public function findProduitByName($name)
         {
-            $res=output("select produit.ref , produit.libelle , produit.prix , produit.description , categorie.libelle , produit.date_ajout, produit.image from produit , categorie where categorie.id=produit.id_cat  and produit.libelle='$name'");
+            $res=output("select produit.ref , produit.libelle , produit.prix , produit.description , categorie.libelle , produit.date_ajout, produit.quantite , produit.image from produit , categorie where categorie.id=produit.id_cat  and produit.libelle LIKE '$name%'");
             $i=0;
             while($tab=$res->fetch(PDO::FETCH_NUM))
             {
