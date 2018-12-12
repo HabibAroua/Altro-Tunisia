@@ -5,7 +5,7 @@
     {
         public function ajouterProduit($ref,$image,$libelle,$prix,$description,$id_cat,$login_admin,$quantite)
         {
-            $p=new Produit($ref,$image,$libelle,$prix,$description,$id_cat,$login_admin,$quabtite);
+            $p=new Produit($ref,$image,$libelle,$prix,$description,$id_cat,$login_admin,$quntite);
             $test=$p->add();
             if($test)
             {
