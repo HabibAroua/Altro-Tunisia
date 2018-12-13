@@ -47,8 +47,13 @@
                                     echo "</td>";
                                 echo "</tr>";
                             echo "</table>";
-                        echo "</form>";
                         echo "<button class='btn btn-lg btn-primary btn-block' type='submit' name='bt_reserver'>Ajouter au panier</button>";
+                        echo "</form>";
+                    }
+                    if(isset($_POST['bt_reserver']))
+                    {
+                        $user=$_SESSION['login'];
+                        
                     }
                 ?>
             </div>
