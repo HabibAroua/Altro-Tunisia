@@ -52,8 +52,10 @@
                     }
                     if(isset($_POST['bt_reserver']))
                     {
+						require_once ('../App/Controller/ReservationController.php');
                         $user=$_SESSION['login'];
-                        
+                        $r =new ReservationController();
+						$r->ajouterAuPanier();
                     }
                 ?>
             </div>

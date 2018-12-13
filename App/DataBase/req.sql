@@ -44,13 +44,13 @@ create table reservation
     login varchar(50) ,
     ref_Prod varchar(50) ,
     date_reservation date 
-)
+);
 
 alter table reservation add CONSTRAINT fk1 PRIMARY key(login,ref_Prod);
 
-alter table reservation add CONSTRAINT fk2 FOREIGN key(login) REFERENCES admin(login)
+alter table reservation add CONSTRAINT fk2 FOREIGN key(login) REFERENCES admin(login);
 
-alter table reservation add CONSTRAINT fk3 FOREIGN key(ref_Prod) REFERENCES produit(ref)
+alter table reservation add CONSTRAINT fk3 FOREIGN key(ref_Prod) REFERENCES produit(ref);
 
 insert into categorie VALUES (1,'Laptop');
 
@@ -62,3 +62,4 @@ alter table produit add COLUMN quantite int;
 
 alter table reservation add COLUMN nb int UNIQUE;
 
+alter table reservation add COLUMN quantite int ;
