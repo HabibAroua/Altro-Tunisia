@@ -16,8 +16,8 @@
                     <input type="text" id="inputPrenom" class="form-control" placeholder="Saisir votre prénom" name="prenom" required autofocus>
                     <label for="inputEmail" class="sr-only">Email address</label>
                     <input type="email" id="inputEmail" class="form-control" placeholder="Email" name="email" required autofocus>
-                    <label for="inputDateNaissance" class="sr-only">Date naissance</label>
-                    <input type="date" id="inputDateNaissance" class="form-control" placeholder="Date de naissance" name="date_naissance" required autofocus>
+                    <label for="inputDateNaissance" class="sr-only" >Date naissance</label>
+                    <input type="date" id="inputDateNaissance" max="1940-12-31" min="1999-12-31" class="form-control" placeholder="Date de naissance" name="date_naissance" required autofocus>
                     <button class="btn btn-lg btn-primary btn-block" type="submit" name="bt_inscription"> 
                          Sign in
                     </button>
