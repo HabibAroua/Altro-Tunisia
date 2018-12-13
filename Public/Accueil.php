@@ -137,6 +137,8 @@
 					break;
 				    case 'acheter' : require_once('../App/View/Panier/Acheter.php');
 					break;
+				    case 'reserver' : require_once('../App/View/Panier/reserver.php');
+					break;
 				    default : require_once('../App/View/default/accueil.php');
 					break;
 				}

@@ -7,7 +7,8 @@
 <script>
 	function show(id)
 	{
-		$('#myStyle').load('Accueil.php?page=produit&panier=' + id);
+		document.location.href="Accueil.php?page=reserver&ref="+id;
+		//$('#myStyle').load('Accueil.php?page=produit&panier=' + id);
 	}
 </script>
 <div style="padding-right: 1px "><div class="padding">
