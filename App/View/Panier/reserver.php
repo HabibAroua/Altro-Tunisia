@@ -17,35 +17,37 @@
                         $description=$produit->getDescription();
                         $image=$produit->getImage();
                         $quantite=$produit->getQuantite();
-                        echo "<table>";
-                            echo "<tr>";
-                                echo "<td><b>Libelle :</b></td>";
-                                echo "<td>$libelle</td>";
-                            echo "</tr>";
-                            echo "<tr>";
-                                echo "<td><b>Prix :</b></td>";
-                                echo "<td>$prix DT</td>";
-                            echo "</tr>";
-                            echo "<tr>";
-                                echo "<td><b>Description :</b></td>";
-                                echo "<td>$description</td>";
-                            echo "</tr>";
-                            echo "<tr>";
-                                echo "<td><b>Image :</b></td>";
-                                echo "<td><img style='height:316px; width:300px;' src='../Admin/imageProduit/$image' /></td>";
-                            echo "</tr>";
-                            echo "<tr>";
-                                echo "<td><b>Quantité :</b></td>";
-                                echo "<td>";
-                                    echo "<select name='quantite'>";
-                                        for($i=1 ;$i<=$quantite ; $i++)
-                                        {
-                                            echo "<option value='$i'>$i</option>";
-                                        }
-                                    echo "</select>";
-                                echo "</td>";
-                            echo "</tr>";
-                        echo "</table>";
+                        echo "<form method='POST' action'' >";
+                            echo "<table>";
+                                echo "<tr>";
+                                    echo "<td><b>Libelle :</b></td>";
+                                    echo "<td>$libelle</td>";
+                                echo "</tr>";
+                                echo "<tr>";
+                                    echo "<td><b>Prix :</b></td>";
+                                    echo "<td>$prix DT</td>";
+                                echo "</tr>";
+                                echo "<tr>";
+                                    echo "<td><b>Description :</b></td>";
+                                    echo "<td>$description</td>";
+                                echo "</tr>";
+                                echo "<tr>";
+                                    echo "<td><b>Image :</b></td>";
+                                    echo "<td><img style='height:316px; width:300px;' src='../Admin/imageProduit/$image' /></td>";
+                                echo "</tr>";
+                                echo "<tr>";
+                                    echo "<td><b>Quantité :</b></td>";
+                                    echo "<td>";
+                                        echo "<select name='quantite'>";
+                                            for($i=1 ;$i<=$quantite ; $i++)
+                                            {
+                                                echo "<option value='$i'>$i</option>";
+                                            }
+                                        echo "</select>";
+                                    echo "</td>";
+                                echo "</tr>";
+                            echo "</table>";
+                        echo "</form>";
                         echo "<button class='btn btn-lg btn-primary btn-block' type='submit' name='bt_reserver'>Ajouter au panier</button>";
                     }
                 ?>
