@@ -22,6 +22,12 @@
             }
             
         }
+        
+        public function produitReserver($user)
+        {
+            $r=new Reservation();
+            return $r->nbrProduitReserverByClient($user);
+        }
     }
 
 ?>

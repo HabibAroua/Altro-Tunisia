@@ -39,9 +39,12 @@
                                     echo "<td><b>Quantité :</b></td>";
                                     echo "<td>";
                                         echo "<select name='quantite'>";
-                                            for($i=1 ;$i<=$quantite ; $i++)
+                                            for($i=0 ;$i<=$quantite ; $i++)
                                             {
-                                                echo "<option value='$i'>$i</option>";
+												if($i!=0)
+												{
+                                                    echo "<option value='$i'>$i</option>";
+												}
                                             }
                                         echo "</select>";
                                     echo "</td>";

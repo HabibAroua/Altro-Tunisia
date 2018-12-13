@@ -91,4 +91,15 @@
             }
             return $i;
         }
+        
+        public function nbrProduitReserverByClient($user)
+        {
+            $res=output("select * from reservation where login='$user'");
+            $i=0;
+            while($tab=$res->fetch(PDO::FETCH_NUM))
+            {
+                $i++;
+            }
+            return $i;
+        }
     }

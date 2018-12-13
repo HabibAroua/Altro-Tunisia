@@ -1,7 +1,9 @@
 <?php
     require_once('../App/Controller/ClientController.php');
+	require_once('../App/Controller/ReservationController.php');
 	$c=new ClientController();
     $c->IsLogin();
+	$r=new ReservationController();
 ?>
 <!DOCTYPE html>
 <html>
@@ -104,7 +106,7 @@
 						    <li><a class="active" href="Accueil.php?page=accueil">Acceuil</a></li>
 							<li><a class="active" href="Accueil.php?page=profil">Profil</a></li>
 							<li><a href="Accueil.php?page=produit">Consulter les produits disponibles</a></li>
-							<li><a href="Accueil.php?page=panier">Panier : <?php echo $nbPanier; ?></a></li>
+							<li><a href="Accueil.php?page=panier">Panier : <?php echo $r->produitReserver($_SESSION['login']) ; ?></a></li>
 							<li><a href="Accueil.php?page=paiement">Paiement</a></li>
 							<li><a href="logout.php">Deconexion</a></li>
 						</ul>
