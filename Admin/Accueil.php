@@ -29,7 +29,7 @@
 						<li><a href="Accueil.php?page=client">Gestion des clients</a></li>
 						<li><a href="Accueil.php?page=gereProduit">Gestion des produits</a></li>
 						<li><a href="#">Gestion des réservation</a></li>
-						<li><a href="#">Les statistiques</a></li>
+						<li><a href="Accueil.php?page=statistique">Les statistiques</a></li>
 						<li><a href="#">Gestion des fidélité</a></li>
 						<li><a href="logout.php">Deconexion</a></li>
 					</ul>
@@ -40,6 +40,7 @@
 		<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.js"></script>
         <script src="javascript/Alert.js"></script>
         <?php
             //require_once('../App/View/Client/Gere_client.php');
@@ -55,6 +56,8 @@
 				    case 'gereProduit' : require_once('../App/View/Produit/Gere_produit.php');
 					break;
 				    case 'modifierProduit' : require_once('../App/View/Produit/modifierProduit.php');
+					break;
+				    case 'statistique' : require_once('../App/View/Reservation/statistique.php');
 					break;
 				}
 			}
