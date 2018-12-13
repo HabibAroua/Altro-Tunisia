@@ -55,7 +55,7 @@
 						require_once ('../App/Controller/ReservationController.php');
                         $user=$_SESSION['login'];
                         $r =new ReservationController();
-						$r->ajouterAuPanier();
+						$r->ajouterAuPanier($user,$_GET['ref'],$_POST['quantite']);
                     }
                 ?>
             </div>

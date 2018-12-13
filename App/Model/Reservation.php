@@ -14,6 +14,16 @@
             $this->date_res=(new \DateTime())->format('Y-m-d');
         }
         
+        public function getQuantite()
+        {
+            return $this->quantite;
+        }
+        
+        public function setQuantite($quantite)
+        {
+            $this->quantite=$quantite;    
+        }
+        
         public function getNb()
         {
             return $this->nb;
@@ -55,7 +65,7 @@
         
         public function add()
         {
-            return input("insert into reservation values('$this->login')");
+            return input("insert into reservation values('$this->login','$this->ref_prod','$this->date_res',$this->nb,$this->quantite); update produit set quantite=quantite-$this->quantite where ref='$this->ref_prod';");
         }
         
         public function update()
