@@ -20,7 +20,13 @@
 				<?php
 					echo "<div><div id='wrapper'>"; 
 						echo "<div class='contents'>";
-						        foreach($T as $v)
+						    if(empty($T))    
+						    {
+								echo "<b>Aucune donnée disponible</b>";
+							}
+							else
+							{
+								foreach($T as $v)
 						        {
 							        $ref=$v{'ref'};
                                     $libelle=$v{'libelle'};
@@ -48,6 +54,7 @@
                                         echo "</div>";
 						            echo "</div>";					
 								}
+							}
 						echo "</div>";
 					echo "</div></div>";		
 				?>
