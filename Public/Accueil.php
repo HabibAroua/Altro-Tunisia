@@ -81,7 +81,25 @@
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <script src="javascript/Alert.js"></script>
     </head>
-	<body>
+	<body onload="inactiveButton();">
+		<script>
+		    function inactiveButton()
+			{
+				document.getElementById("bt_recherche").disabled = true;
+			}
+			
+			function texting()
+			{
+				if(document.getElementById("search").value ==="")
+				{
+					document.getElementById("bt_recherche").disabled = true;
+				}
+				else
+				{
+					document.getElementById("bt_recherche").disabled = false;
+				}
+			}
+</script>
 		<?php
 		    $nbPanier=0;
 			if(isset($_GET['panier']))
@@ -112,8 +130,8 @@
 						</ul>
 						<div style="padding-top:12px;">
 							<form action="Accueil.php?page=rechercheProduit" method="POST">
-								<input type="search" name="txtCherche" placeholder="Recherche un produit">
-								<button>Recherche</button>
+								<input id="search" type="search" name="txtCherche" onchange="texting();" placeholder="Recherche un produit">
+								<button id="bt_recherche">Recherche</button>
 							</form>
 						</div>
 					</div>
