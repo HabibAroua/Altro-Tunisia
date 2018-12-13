@@ -59,6 +59,7 @@
                         $user=$_SESSION['login'];
                         $r =new ReservationController();
 						$r->ajouterAuPanier($user,$_GET['ref'],$_POST['quantite']);
+						echo "<script>document.location.href='http://localhost/SiteWebCommercial/Public/Accueil.php?page=produit'</script>";
                     }
                 ?>
             </div>
