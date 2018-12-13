@@ -32,32 +32,38 @@
           </thead>
           <tbody>
                <?php
-                    foreach($T as $v)
-                    {
-                        $ref=$v{'ref'};
-                        $libelle=$v{'libelle'};
-                        $prix=$v{'prix'};
-                        $description=$v{'description'};
-                        $categorie=$v{'categorie'};
-                        $date_ajout=$v{'date_ajout'};
-                        $image=$v{'image'};
-				    $quantite=$v{'quantite'};
-                        echo '<tr>';
-                              echo "<td>$ref</td>";
-                              echo "<td>$libelle</td>";
-                              echo "<td>$prix</td>";
-                              echo "<td>$description</td>";
-                              echo "<td>$categorie</td>";
-                              echo "<td>$date_ajout</td>";
-						echo "<td>$quantite</td>";
-                              echo "<td><img src='imageProduit/$image' style='width:50px; height:50px;' /></td>";
-               ?>
-            
-                             <td><center><button type="button" class="glyphicon glyphicon-trash"></button></center></td>
-					    <td><center><button type="button" class="glyphicon glyphicon-pencil" onclick="allerModifier('<?php echo $ref ?>');"></button></center></td>
-               <?php
-                        echo '</tr>';
-                    }
+			     if(empty($T))
+				{
+					echo "<tr><td><b>Aucune donnée disponible</b></td></tr>";
+				}
+				else
+				{
+					foreach($T as $v)
+                         {
+                              $ref=$v{'ref'};
+                              $libelle=$v{'libelle'};
+                              $prix=$v{'prix'};
+                              $description=$v{'description'};
+                              $categorie=$v{'categorie'};
+                              $date_ajout=$v{'date_ajout'};
+                              $image=$v{'image'};
+				          $quantite=$v{'quantite'};
+                              echo '<tr>';
+                                   echo "<td>$ref</td>";
+                                   echo "<td>$libelle</td>";
+                                   echo "<td>$prix</td>";
+                                   echo "<td>$description</td>";
+                                   echo "<td>$categorie</td>";
+                                   echo "<td>$date_ajout</td>";
+						     echo "<td>$quantite</td>";
+                                   echo "<td><img src='imageProduit/$image' style='width:50px; height:50px;' /></td>";
+                                   ?>
+		                         <td><center><button type="button" class="glyphicon glyphicon-trash"></button></center></td>
+					          <td><center><button type="button" class="glyphicon glyphicon-pencil" onclick="allerModifier('<?php echo $ref ?>');"></button></center></td>
+                                   <?php
+                              echo '</tr>';
+					}
+				}
                ?>
           </tbody>
      </table>
