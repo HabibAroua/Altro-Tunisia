@@ -15,9 +15,6 @@
         <link href="css/styleClient.css" rel="stylesheet" />
 		<link href="css/pagination.css" rel="stylesheet" />
 		<style>
-			
-		</style>
-		<style>
 			#container
 			{
 				width: 80%;
