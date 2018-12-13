@@ -7,7 +7,18 @@
     
     function error($message)
     {
-        echo "<script> basicMessage('$message');</script>";
+        echo "
+            <script>
+                swal
+                (
+                    {
+                        type: 'error',
+                        title: 'Erreur Message',
+                        text: '$message',
+                        footer: '__'
+                    }
+                );
+            </script>";
     }
 
     

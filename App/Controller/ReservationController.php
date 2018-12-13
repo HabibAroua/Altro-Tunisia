@@ -2,6 +2,7 @@
     require_once('../App/Model/Reservation.php');
     class ReservationController
     {
+        
         public function ajouterAuPanier($login,$ref_prod,$q)
         {
             $r=new Reservation();
@@ -28,6 +29,33 @@
             $r=new Reservation();
             return $r->nbrProduitReserverByClient($user);
         }
+        
+        public function AllPanier($user)
+        {
+            $r=new Reservation();
+            $r->setLogin($user);
+            return $r->allPanier();
+        }
+        
+        public function annulerReservation($nb,$ref,$quantite)
+        {
+            $r=new Reservation();
+            $r->setNb($nb);
+            $r->setRef_prod($ref);
+            $r->setQuantite($quantite);
+            $test = $r->delete();
+            if($test)
+            {
+                require_once 'alert.php';
+                show("L ajout au panier effectué avec succes");
+            }
+            else
+            {
+                require_once 'alert.php';
+                error("Error");
+            }   
+        }
+        
     }
 
 ?>

@@ -17,7 +17,7 @@
             if($password!=$confPassword)
             {
                 require_once 'alert.php';
-                show("Vérifier la confirmation de mot de passe");
+                error("Vérifier la confirmation de mot de passe");
             }
             else
             {

@@ -74,16 +74,23 @@
         }
         public function delete()
         {
-            
+            return input("delete from reservation where nb=$this->nb; update produit set quantite=quantite+$this->quantite where ref='$this->ref_prod';");
         }
-        public function allClient()
+        public function allPanier()
         {
-            
+            $res=output("SELECT produit.ref , produit.libelle , produit.prix , reservation.quantite, produit.image , reservation.nb ,reservation.date_reservation from produit , client , reservation where produit.ref=reservation.ref_Prod and client.login=reservation.login and client.login='$this->login'");
+            $i=0;
+            while($tab=$res->fetch(PDO::FETCH_NUM))
+            {
+              $T[$i]=$reservation = array('ref'=>$tab[0],'libelle'=>$tab[1],'prix'=>$tab[2],'quantite'=>$tab[3],'image'=>$tab[4],'nb'=>$tab[5],'date_res'=>$tab[6],);
+              $i++;
+		 	}
+            return $T;
         }
         
         public function nbPanier()
         {
-            $res=output("select * from reservation ");
+            $res=output("select * from reservation");
             $i=0;
             while($tab=$res->fetch(PDO::FETCH_NUM))
             {
