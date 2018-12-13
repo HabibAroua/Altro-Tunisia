@@ -1,11 +1,11 @@
 <?php
     require_once('../App/DataBase/query.php');
     
-    class Client
+    class Reservation
     {
         private $date_res;
         
-        public function __construct($dare_res)
+        public function __construct()
         {
             $this->date_res=$date_res;
         }
@@ -32,5 +32,15 @@
         {
 
         }
+        
+        public function nbPanier()
+        {
+            $res=output("select * from client ");
+            $i=0;
+            while($tab=$res->fetch(PDO::FETCH_NUM))
+            {
+                $i++;
+            }
+            return $i;
+        }
     }
-
