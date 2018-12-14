@@ -125,7 +125,7 @@
 		
 		public function nbPanierByCategorie($id)
         {
-            $res=output("select count(*) from reservation , produit , categorie where produit.ref=reservation.ref_Prod and categorie.id=produit.id_cat and categorie.id=$id");
+            $res=output("select sum(reservation.quantite) from reservation , produit , categorie where produit.ref=reservation.ref_Prod and categorie.id=produit.id_cat and categorie.id=$id");
             $i=0;
             while($tab=$res->fetch(PDO::FETCH_NUM))
             {

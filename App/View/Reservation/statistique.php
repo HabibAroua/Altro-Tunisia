@@ -40,7 +40,7 @@
 			<div class="col-lg-12 col-md-12 col-sm-xs-12">
                 <center>
                     <h1>
-                        Les statistiques
+                        Les statistiques par categories les plus reservés
                     </h1>
                 </center>
                 <center>
