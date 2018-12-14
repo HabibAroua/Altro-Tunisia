@@ -15,7 +15,7 @@
                          <th scope="col">Nom</th>
                          <th scope="col">Prenom</th>
                          <th scope="col">Email</th>
-                         <th scope="col">Supprimer</th>
+                         <th scope="col"><center>Supprimer</center></th>
                     </tr>
                </thead>
                <tbody>
@@ -72,7 +72,11 @@
                               echo "<td> $prenom</td>";
                               echo "<td> $email</td>";
                               ?>
-                              <td><input type='submit' onclick="show('<?php echo $login  ?>');" value='Supprimer' /></td>
+                              <td>
+							<center>
+								<button type="button" class="glyphicon glyphicon-trash" onclick="show('<?php echo $login  ?>');"></button>
+							</center>
+						</td>
                               <?php
                               echo '</tr>';
                          }
