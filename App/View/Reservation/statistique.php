@@ -1,32 +1,39 @@
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		
-<script>
+<?php
+    require_once ('../App/Controller/ReservationController.php');
+	$r=new ReservationController();
+	$laptop=$r->nbPanierByCategorie(1);
+	$smartPhone=$r->nbPanierByCategorie(2);
+	$television=$r->nbPanierByCategorie(3);
+    echo "<script>
     $(document).ready(function(){
-	var ctx = $("#mycanavas").get(0).getContext("2d");
+	var ctx = $('#mycanavas').get(0).getContext('2d');
 		
 	var data = [
 	{
-	    value:270 ,
-		color: "cornflowerblue",
-		highlight: "Lightskyblue",
-		label: "JavaScript"
+	    value: $laptop ,
+		color: 'cornflowerblue',
+		highlight: 'Lightskyblue',
+		label: 'Laptop'
 	},
 	{
-	    value: 50,
-		color: "Lightgreen",
-		highlight: "yellowgreen",
-		label: "HTML"
+	    value: $smartPhone,
+		color: 'Lightgreen',
+		highlight: 'yellowgreen',
+		label: 'Smartphone'
 	},
 	{
-	    value:40,
-		color:"orange",
-		highlight:"darkorange",
-		label:"CSS"
+	    value: $television ,
+		color:'orange',
+		highlight:'darkorange',
+		label:'Television'
 	}];
 	var chart =new Chart(ctx).Doughnut(data);
 });
-</script>
+</script>";
+?>
+
 <div style="padding-right: 1px "><div class="padding">
 	<div class="container">
 		<div class="row">

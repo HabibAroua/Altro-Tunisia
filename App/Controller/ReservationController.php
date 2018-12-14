@@ -62,6 +62,12 @@
             }   
         }
         
+        public function nbPanierByCategorie($id)
+        {
+            $r=new Reservation();
+            return $r->nbPanierByCategorie($id);
+        }
+        
     }
 
 ?>

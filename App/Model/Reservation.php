@@ -123,4 +123,16 @@
             return $i;
         }
 		
+		public function nbPanierByCategorie($id)
+        {
+            $res=output("select count(*) from reservation , produit , categorie where produit.ref=reservation.ref_Prod and categorie.id=produit.id_cat and categorie.id=$id");
+            $i=0;
+            while($tab=$res->fetch(PDO::FETCH_NUM))
+            {
+                $i=$tab[0];
+            }
+            return $i;
+        }
+		//select count(*) from reservation , produit , categorie where produit.ref=reservation.ref_Prod and categorie.id=produit.id_cat and categorie.id=3
+
     }
