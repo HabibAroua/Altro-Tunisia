@@ -28,7 +28,7 @@
                         </li>
 						<li><a href="Accueil.php?page=client">Gestion des clients</a></li>
 						<li><a href="Accueil.php?page=gereProduit">Gestion des produits</a></li>
-						<li><a href="#">Gestion des réservation</a></li>
+						<li><a href="Accueil.php?page=gererReservation">Gestion des réservation</a></li>
 						<li><a href="Accueil.php?page=statistique">Les statistiques</a></li>
 						<li><a href="#">Gestion des fidélité</a></li>
 						<li><a href="logout.php">Deconexion</a></li>
@@ -58,6 +58,8 @@
 				    case 'modifierProduit' : require_once('../App/View/Produit/modifierProduit.php');
 					break;
 				    case 'statistique' : require_once('../App/View/Reservation/statistique.php');
+					break;
+				    case 'gererReservation' : require_once('../App/View/Panier/Gerer_reservation.php');
 					break;
 				}
 			}

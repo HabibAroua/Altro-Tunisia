@@ -76,7 +76,8 @@
         {
             return input("delete from reservation where nb=$this->nb; update produit set quantite=quantite+$this->quantite where ref='$this->ref_prod';");
         }
-        public function allPanier()
+		
+        public function allPanierUser()
         {
             $res=output("SELECT produit.ref , produit.libelle , produit.prix , reservation.quantite, produit.image , reservation.nb ,reservation.date_reservation from produit , client , reservation where produit.ref=reservation.ref_Prod and client.login=reservation.login and client.login='$this->login'");
             $i=0;

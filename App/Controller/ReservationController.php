@@ -30,11 +30,11 @@
             return $r->nbrProduitReserverByClient($user);
         }
         
-        public function AllPanier($user)
+        public function AllPanierUser($user)
         {
             $r=new Reservation();
             $r->setLogin($user);
-            return $r->allPanier();
+            return $r->allPanierUser();
         }
         
         public function annulerReservation($nb,$ref,$quantite)
