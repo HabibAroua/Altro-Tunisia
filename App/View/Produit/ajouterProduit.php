@@ -12,7 +12,7 @@
                         <input type="text" id="inputText" class="form-control" placeholder="saisir libeille" name="libelle" required value="<?php if(isset($_POST['libelle'])) echo $_POST['libelle'] ; ?>">
                         <input type="text" id="inputText" class="form-control" placeholder="saisir prix" name="prix" required value="<?php if(isset($_POST['prix'])) echo $_POST['prix'] ; ?>">
                         <textarea name="description" style="width:1140px; height:100px;" required><?php if(isset($_POST['description'])) echo $_POST['description'] ; ?> </textarea>
-                        <input type="number" min="1" id="inputText" class="form-control" placeholder="saisir quantité" name="quantite" required value="<?php if (isset($_POST['quantite'])) echo $p->getQuantite();  ?>">
+                        <input type="number" min="1" id="inputText" class="form-control" placeholder="saisir quantité" name="quantite" required value="">
 
                         <br>
                         <select name='inputCategorie'>

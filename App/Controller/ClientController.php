@@ -111,13 +111,13 @@
 				else
 				{
 					require_once 'alert.php';
-                    show("Eurreur au niveau de modification du modification");
+                    error("Eurreur au niveau de modification du modification");
 				}
 			}
 			else
 			{
 				require_once 'alert.php';
-                show("Vérifié le mot de passe");
+                error("Vérifié le mot de passe");
 			}
 		}
 		

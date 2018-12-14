@@ -17,9 +17,9 @@
                     <label for="inputEmail" class="sr-only">Email address</label>
                     <input type="email" id="inputEmail" class="form-control" placeholder="Email" name="email" required autofocus>
                     <label for="inputDateNaissance" class="sr-only" >Date naissance</label>
-                    <input type="date" id="inputDateNaissance" max="1940-12-31" min="1999-12-31" class="form-control" placeholder="Date de naissance" name="date_naissance" required autofocus>
+                    <input type="date" id="inputDateNaissance" min="1940-12-31" max="1999-12-31"  class="form-control" placeholder="Date de naissance" name="date_naissance" required autofocus>
                     <button class="btn btn-lg btn-primary btn-block" type="submit" name="bt_inscription"> 
-                         Sign in
+                         Inscrire
                     </button>
                     <p class="mt-5 mb-3 text-muted">&copy; 2018-2019</p>
 					<?php echo (new \DateTime())->format('Y-m-d'); ?>

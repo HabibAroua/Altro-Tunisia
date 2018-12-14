@@ -78,8 +78,9 @@
 <?php
      if(isset($_GET['supp']))
 	{
-		$s=$_GET['supp'];
-		echo "Le s est $s";
+	     require_once ('../App/Controller/ProduitController.php');
+          $p=new ProduitController();
+		$p->supprimerProduit($_GET['supp']);
 	}
 
 ?>

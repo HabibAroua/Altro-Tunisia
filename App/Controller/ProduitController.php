@@ -5,7 +5,7 @@
     {
         public function ajouterProduit($ref,$image,$libelle,$prix,$description,$id_cat,$login_admin,$quantite)
         {
-            $p=new Produit($ref,$image,$libelle,$prix,$description,$id_cat,$login_admin,$quntite);
+            $p=new Produit($ref,$image,$libelle,$prix,$description,$id_cat,$login_admin,$quantite);
             $test=$p->add();
             if($test)
             {
@@ -105,6 +105,23 @@
             {
                 require_once 'alert.php';
                 error("Erreur au niveau de modification");
+            }
+        }
+        
+        public function supprimerProduit($ref)
+        {
+            $p=new Produit('','','','','','','','');
+            $test=$p->delete($ref);
+            if($test)
+            {
+                require_once 'alert.php';
+                show("Suppression effectué avec succes");
+                echo "<script>document.location.href='http://localhost/SiteWebCommercial/Admin/Accueil.php?page=gereProduit';</script>";
+            }
+            else
+            {
+                require_once 'alert.php';
+                error("Erreur au niveau du suppression");
             }
         }
     }

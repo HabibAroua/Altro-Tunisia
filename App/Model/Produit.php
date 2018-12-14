@@ -140,7 +140,7 @@
         
         public function delete($ref)
         {
-            return input("delete table produit where ref='$ref'");
+            return input("delete from produit where ref='$ref'");
         }
         
         public function allProduit()

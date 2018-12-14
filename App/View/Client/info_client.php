@@ -52,7 +52,7 @@
                     <label for="inputEmail" class="sr-only">Email address</label>
                     <input type="email" id="inputEmail" class="form-control" placeholder="Email" name="email" value ="<?php echo $client->getEmail();?>">
                     <label for="inputDateNaissance" class="sr-only">Date naissance</label>
-                    <input type="date" id="inputDateNaissance" class="form-control" placeholder="Date de naissance" name="date_naissance" value="<?php echo $client->getDateNaissance();?>">
+                    <input type="date" id="inputDateNaissance" min="1940-12-31" max="1999-12-31" class="form-control" placeholder="Date de naissance" name="date_naissance" value="<?php echo $client->getDateNaissance();?>">
                     <button class="btn btn-lg btn-primary btn-block" type="submit" name="bt_modif"> 
                          Modifier
                     </button>
