@@ -8,11 +8,22 @@
         private $date_res;
         private $nb;
         private $quantite;
+		private $reduction;
         
         public function __construct()
         {
             $this->date_res=(new \DateTime())->format('Y-m-d');
         }
+		
+		public function getReduction()
+		{
+			return $this->reduction;
+		}
+		
+		public function setReduction($reduction)
+		{
+			$this->reduction=$reduction;
+		}
         
         public function getQuantite()
         {
@@ -65,7 +76,7 @@
         
         public function add()
         {
-            return input("insert into reservation values('$this->login','$this->ref_prod','$this->date_res',$this->nb,$this->quantite); update produit set quantite=quantite-$this->quantite where ref='$this->ref_prod';");
+            return input("insert into reservation values('$this->login','$this->ref_prod','$this->date_res',$this->nb,$this->quantite,null); update produit set quantite=quantite-$this->quantite where ref='$this->ref_prod';");
         }
         
         public function update()

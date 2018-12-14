@@ -63,3 +63,5 @@ alter table produit add COLUMN quantite int;
 alter table reservation add COLUMN nb int UNIQUE;
 
 alter table reservation add COLUMN quantite int ;
+
+alter table reservation add COLUMN reduction int ;
