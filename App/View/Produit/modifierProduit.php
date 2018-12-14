@@ -4,8 +4,10 @@
     require_once ('../App/Controller/ProduitController.php');
     $pc=new ProduitController();
     if(isset($_GET['produit']))
+    {
         $p=$pc->findProduitByRef($_GET['produit']);
         $image=$p->getImage();
+    }
 ?>
 <div style="padding-right: 1px ">
     <div class="padding">

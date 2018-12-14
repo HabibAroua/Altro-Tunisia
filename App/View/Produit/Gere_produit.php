@@ -9,6 +9,12 @@
         document.location.href="http://localhost/SiteWebCommercial/Admin/Accueil.php?page=modifierProduit&produit="+id;
     }
 </script>
+<script>
+	function allerSupprimer(id)
+	{
+		document.location.href="http://localhost/SiteWebCommercial/Admin/Accueil.php?page=gereProduit&supp="+id;
+	}
+</script>
 <div style="padding-right: 1px "><div class="padding">
 	<div class="container">
         <center>
@@ -58,7 +64,7 @@
 						     echo "<td>$quantite</td>";
                                    echo "<td><img src='imageProduit/$image' style='width:50px; height:50px;' /></td>";
                                    ?>
-		                         <td><center><button type="button" class="glyphicon glyphicon-trash"></button></center></td>
+		                         <td><center><button type="button" class="glyphicon glyphicon-trash"  onclick="allerSupprimer('<?php echo $ref ?>');"></button></center></td>
 					          <td><center><button type="button" class="glyphicon glyphicon-pencil" onclick="allerModifier('<?php echo $ref ?>');"></button></center></td>
                                    <?php
                               echo '</tr>';
@@ -69,3 +75,11 @@
      </table>
     </div>
 </div>
+<?php
+     if(isset($_GET['supp']))
+	{
+		$s=$_GET['supp'];
+		echo "Le s est $s";
+	}
+
+?>
