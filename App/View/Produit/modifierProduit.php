@@ -60,7 +60,7 @@
                 <div class="col-lg-6 col-md-6 col-sm-xs-6">
                     <?php echo "<center><img style='height:316px; width:300px;' src='imageProduit/$image' /></center>"; ?>
                     <form method="POST" action="" enctype="multipart/form-data">
-                        <input type="file" id="inputFile" class="form-control" placeholder="Saisir File" name="image" required >
+                        <input type="file" id="inputFile" class="glyphicon glyphicon-paperclip" placeholder="Saisir File" name="image" required >
                         <button class="btn btn-lg btn-primary btn-block" type="submit" name="bt_modifier_image">
                             Modifier l'image
                         </button>

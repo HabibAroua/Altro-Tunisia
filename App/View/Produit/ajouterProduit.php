@@ -8,7 +8,7 @@
                             <h1 class="h3 mb-3 font-weight-normal">Ajouter Produit</h1>
                         </center>
                         <input type="text" id="inputref" class="form-control" placeholder="saisir la reférence" name="reference" value="<?php if(isset($_POST['reference'])) echo $_POST['reference'] ; ?>" required>
-                        <input type="file" id="inputFile" class="form-control" placeholder="Saisir File" name="image" required >
+                        <input type="file" id="inputFile" class="glyphicon glyphicon-paperclip" placeholder="Saisir File" name="image" required >
                         <input type="text" id="inputText" class="form-control" placeholder="saisir libeille" name="libelle" required value="<?php if(isset($_POST['libelle'])) echo $_POST['libelle'] ; ?>">
                         <input type="text" id="inputText" class="form-control" placeholder="saisir prix" name="prix" required value="<?php if(isset($_POST['prix'])) echo $_POST['prix'] ; ?>">
                         <textarea name="description" style="width:1140px; height:100px;" required><?php if(isset($_POST['description'])) echo $_POST['description'] ; ?> </textarea>
@@ -69,14 +69,15 @@
         {
             echo
             "<script>
-                swal(
-                        {
-                            title: 'Erreur',
-                            text: 'Les fichiers png ou jpg sont acceptable',
-                            icon: 'warning',
-                            button: 'OK',
-                        }
-                    );
+                swal
+                (
+                    {
+                        title: 'Erreur',
+                        text: 'Les fichiers png ou jpg sont acceptable',
+                        icon: 'warning',
+                        button: 'OK',
+                    }
+                );
             </script>";
         }
         
