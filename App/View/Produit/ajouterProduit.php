@@ -31,7 +31,6 @@
                         <button class="btn btn-lg btn-primary btn-block" type="submit" name="bt_ajouter_produit">
                             Ajouter
                         </button>
-
                     </form>
                 </div>
             </div>
