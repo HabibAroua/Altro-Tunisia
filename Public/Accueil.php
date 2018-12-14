@@ -15,6 +15,7 @@
         <link href="css/styleClient.css" rel="stylesheet" />
 		<link href="css/pagination.css" rel="stylesheet" />
 		<style>
+			
 			#container
 			{
 				width: 80%;
@@ -60,6 +61,7 @@
 			}
 		</style>
 		<style>
+			
 			#home
             {
 				background: url(picture/mountains.jpeg) no-repeat center center fixed;
@@ -69,6 +71,7 @@
 	            width: 100%;
 	            background-size:cover; 
 			}
+			
 		</style>
 		<link rel="stylesheet" type="text/css" href="css/sweetalert2.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

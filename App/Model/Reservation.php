@@ -90,11 +90,11 @@
         
         public function nbPanier()
         {
-            $res=output("select * from reservation");
+            $res=output("select max(nb) from reservation");
             $i=0;
             while($tab=$res->fetch(PDO::FETCH_NUM))
             {
-                $i++;
+                $i=$tab[0];
             }
             return $i;
         }
@@ -109,4 +109,5 @@
             }
             return $i;
         }
+		
     }
