@@ -9,6 +9,7 @@
         private $nb;
         private $quantite;
 		private $reduction;
+		private $nbres;
         
         public function __construct()
         {
@@ -76,7 +77,7 @@
         
         public function add()
         {
-            return input("insert into reservation values('$this->login','$this->ref_prod','$this->date_res',$this->nb,$this->quantite,null); update produit set quantite=quantite-$this->quantite where ref='$this->ref_prod';");
+            return input("insert into reservation values('$this->login','$this->ref_prod','$this->date_res',$this->nb,$this->quantite,null,null); update produit set quantite=quantite-$this->quantite where ref='$this->ref_prod';");
         }
         
         public function update()
