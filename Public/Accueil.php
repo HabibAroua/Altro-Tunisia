@@ -99,7 +99,7 @@
 					document.getElementById("bt_recherche").disabled = false;
 				}
 			}
-</script>
+        </script>
 		<?php
 		    $nbPanier=0;
 			if(isset($_GET['panier']))

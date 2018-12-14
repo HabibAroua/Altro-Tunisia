@@ -92,7 +92,7 @@
         
         public function update()
         {
-            return input("update reservation set reduction='$this->reduction' and nbres='$this->nbres'");    
+            return input("update reservation set reduction='$this->reduction' , nbres='$this->nbres'");    
         }
 		
         public function delete()
