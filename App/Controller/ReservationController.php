@@ -75,6 +75,24 @@
             return $r->nbrAchat();
         }
         
+        public function gereFidelity($reduction,$nbres)
+        {
+            $r=new Reservation();
+            $r->setReduction($reduction);
+            $r->setNbres($nbres);
+            $test=$r->update();
+            if($test)
+            {
+                require_once 'alert.php';
+                show("Choix de reduction effectue avec succes");
+            }
+            else
+            {
+                require_once 'alert.php';
+                error("Erreur au niveau de choix");
+            }
+        }
+        
     }
 
 ?>

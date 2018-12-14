@@ -92,8 +92,9 @@
         
         public function update()
         {
-            
+            return input("update reservation set reduction='$this->reduction' and nbres='$this->nbres'");    
         }
+		
         public function delete()
         {
             return input("delete from reservation where nb=$this->nb; update produit set quantite=quantite+$this->quantite where ref='$this->ref_prod';");
