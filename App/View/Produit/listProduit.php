@@ -1,7 +1,7 @@
 <?php
 	require_once ('../App/Controller/ProduitController.php');
     $p=new ProduitController();
-    $T=$p->getAllProduit();
+    $T=$p->getAllProduitDisponible();
 ?>
 <script src="javascript/pagination.js"></script>
 <script>
