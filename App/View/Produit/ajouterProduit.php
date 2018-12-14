@@ -20,8 +20,8 @@
                             require_once ('../App/Controller/CategorieController.php');
                             $c=new CategorieController();
                             $T=$c->getAllCategorie();
-                            foreach($T as $v) {
-
+                            foreach($T as $v)
+                            {
                                 $id = $v{'id'};
                                 $libelle = $v{'libelle'};
                                 echo "<option value='$id'>$libelle</option>";
