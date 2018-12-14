@@ -155,7 +155,4 @@
             }
             return $i;
         }
-		
-		//select count(*) from reservation , produit , categorie where produit.ref=reservation.ref_Prod and categorie.id=produit.id_cat and categorie.id=3
-
     }
