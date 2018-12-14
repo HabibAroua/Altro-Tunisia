@@ -5,7 +5,7 @@
 			               (
 						     {
 								title: "Are you sure?",
-								text: "Voulez vous supprimer cet client ?",
+								text: "Voulez vous supprimer cette commande ?",
                                         icon: "warning",
                                         buttons: true,
                                         dangerMode: true,
@@ -24,7 +24,7 @@
 						                                     //   icon: "success",
 													//}
 				                                        //);
-																document.location.href="http://localhost/SiteWebCommercial/Public/Accueil.php?page=panier&nb="+nb+"&ref="+ref+"&quantite="+quantite;
+																document.location.href="http://localhost/SiteWebCommercial/Admin/Accueil.php?page=gererReservation&nb="+nb+"&ref="+ref+"&quantite="+quantite;
 
 							                    }
 					                              else
