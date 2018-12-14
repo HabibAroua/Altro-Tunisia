@@ -56,7 +56,7 @@
 						<?php
 						    require_once ('../App/Controller/ReservationController.php');
 							$r=new ReservationController();
-							$T=$r->AllPanier($_SESSION['login']);
+							$T=$r->AllPanier();
 							if(empty($T))
 							{
 								echo "<tr><td>Vide</td></tr>";

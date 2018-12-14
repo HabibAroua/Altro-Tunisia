@@ -37,6 +37,12 @@
             return $r->allPanierUser();
         }
         
+        public function AllPanier()
+        {
+            $r=new Reservation();
+            return $r->allPanier();
+        }
+        
         public function annulerReservation($nb,$ref,$quantite)
         {
             $r=new Reservation();
