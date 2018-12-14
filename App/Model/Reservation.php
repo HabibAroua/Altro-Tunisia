@@ -16,6 +16,16 @@
             $this->date_res=(new \DateTime())->format('Y-m-d');
         }
 		
+		public function getNbres()
+		{
+			return $this->nbres;
+		}
+		
+		public function setNbres($nbres)
+		{
+		    $this->nbres=$nbres;	
+		}
+		
 		public function getReduction()
 		{
 			return $this->reduction;
