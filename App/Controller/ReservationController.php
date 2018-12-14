@@ -68,6 +68,13 @@
             return $r->nbPanierByCategorie($id);
         }
         
+        public function nbrAchat($user)
+        {
+            $r=new Reservation();
+            $r->setLogin($user);
+            return $r->nbrAchat();
+        }
+        
     }
 
 ?>

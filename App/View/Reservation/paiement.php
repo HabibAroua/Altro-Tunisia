@@ -45,7 +45,7 @@
 							}
 						?>
 					</table>
-					<?php echo "La somme total est <b>$somme DT</b>"; ?>
+					<?php $nbr=$r->nbrAchat($_SESSION['login']); echo "La somme total est <b>$somme DT</b> nbr : $nbr"; ?>
 					<button type="button" class="glyphicon glyphicon-euro">Acheter</button>
 				</fieldset>
             </div>
