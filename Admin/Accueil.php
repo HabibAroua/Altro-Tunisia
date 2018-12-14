@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Bootstrap Landing Page Website Tutorial</title>
+        <title>Acces Admin</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -30,21 +30,18 @@
 						<li><a href="Accueil.php?page=gereProduit">Gestion des produits</a></li>
 						<li><a href="Accueil.php?page=gererReservation">Gestion des réservation</a></li>
 						<li><a href="Accueil.php?page=statistique">Les statistiques</a></li>
-						<li><a href="#">Gestion des fidélité</a></li>
+						<li><a href="Accueil.php?page=fidel">Gestion des fidélité</a></li>
 						<li><a href="logout.php">Deconexion</a></li>
 					</ul>
                 </div>
             </div>
         </nav>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.js"></script>
         <script src="javascript/Alert.js"></script>
-        <?php
-            //require_once('../App/View/Client/Gere_client.php');
-			
+        <?php			
 			if(isset($_GET['page']))
 			{
 				switch($_GET['page'])
@@ -60,6 +57,8 @@
 				    case 'statistique' : require_once('../App/View/Reservation/statistique.php');
 					break;
 				    case 'gererReservation' : require_once('../App/View/Panier/Gerer_reservation.php');
+					break;
+				    case 'fidel' :require_once('../App/View/Reservation/GereFidel.php');
 					break;
 				}
 			}
