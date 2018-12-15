@@ -167,4 +167,27 @@
             }
             return $i;
         }
+		
+		public function getRealReduction()
+		{
+			$res=output("select DISTINCT reduction FROM reservation WHERE reduction is not null");
+			$i=0;
+            while($tab=$res->fetch(PDO::FETCH_NUM))
+            {
+                $i=$tab[0];
+            }
+            return $i;
+		}
+		
+		public function getRealNbres()
+		{
+			$res=output("select DISTINCT nbres FROM reservation WHERE nbres is not null");
+			$i=0;
+            while($tab=$res->fetch(PDO::FETCH_NUM))
+            {
+                $i=$tab[0];
+            }
+            return $i;
+		}
+		
     }

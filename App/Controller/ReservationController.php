@@ -93,6 +93,18 @@
             }
         }
         
+        public function getReduction()
+        {
+            $r=new Reservation();
+            return $r->getRealReduction();
+        }
+        
+        public function getNbres()
+        {
+            $r=new Reservation();
+            return $r->getRealNbres();
+        }
+        
     }
 
 ?>

@@ -45,7 +45,22 @@
 							}
 						?>
 					</table>
-					<?php $nbr=$r->nbrAchat($_SESSION['login']); echo "La somme total est <b>$somme DT</b> nbr : $nbr"; ?>
+					<?php
+					    $nbr=$r->nbrAchat($_SESSION['login']);
+						$reduction=$r->getReduction();
+						$nbres=$r->getNbres();
+						if($nbr>=$nbres)
+						{
+						    echo "<b> Felicitation vous êtes bénéficie par la reduction $reduction % </b><br>";
+							$val=$somme*($reduction/100);
+							$somme=$somme-$val;
+							echo "La somme total est <b>$somme DT</b>";
+						}
+						else
+						{
+							echo "La somme total est <b>$somme DT</b> nbr : $nbr , reduction : $reduction , nbres : $nbres";
+						}
+					?>
 					<button type="button" class="glyphicon glyphicon-euro">Acheter</button>
 				</fieldset>
             </div>
