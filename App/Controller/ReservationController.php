@@ -105,6 +105,23 @@
             return $r->getRealNbres();
         }
         
+        public function acheter($user)
+        {
+            $r=new Reservation();
+            $r->setLogin($user);
+            $test=$r->payer();
+            if($test)
+            {
+                require_once 'alert.php';
+                show("Paiement effectué avec succes");   
+            }
+            else
+            {
+                require_once 'alert.php';
+                error("Erreur");
+            }
+        }
+        
     }
 
 ?>

@@ -6,9 +6,11 @@
 			<div class="col-lg-6 col-md-6 col-sm-xs-4">
                 <h1>Paiement</h1>
 				<fieldset>
+					
 					<legend>
 						Facture <img style="width: 150px; height: 50px;" src="../Admin/image/visa.jpg"/>
 					</legend>
+					<form method="POST" action="">
 					<table class="table table-striped table-dark">
 						<tr>
 							<th scope="col">Libelle</th>
@@ -61,9 +63,22 @@
 							echo "La somme total est <b>$somme DT</b> nbr : $nbr , reduction : $reduction , nbres : $nbres";
 						}
 					?>
-					<button type="button" class="glyphicon glyphicon-euro">Acheter</button>
+					    <!--<button type="button" name="bt" class="glyphicon glyphicon-euro">
+							Acheter
+						</button> -->
+						<input class="glyphicon glyphicon-euro" name="bt" type="submit" value="Acheter" />
+					</form>
 				</fieldset>
             </div>
         </div>
     </div>
 </div>
+
+<?php
+	if(isset($_POST['bt']))
+	{
+		require_once ('../App/Controller/ReservationController.php');
+		$r=new ReservationController();
+		$r->acheter($_SESSION['login']);
+	}
+?>

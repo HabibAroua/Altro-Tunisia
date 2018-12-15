@@ -67,3 +67,5 @@ alter table reservation add COLUMN quantite int ;
 alter table reservation add COLUMN reduction int ;
 
 alter TABLE reservation add COLUMN nbres int;
+
+ALTER table reservation add COLUMN achat int;

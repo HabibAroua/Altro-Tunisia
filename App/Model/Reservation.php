@@ -87,13 +87,18 @@
         
         public function add()
         {
-            return input("insert into reservation values('$this->login','$this->ref_prod','$this->date_res',$this->nb,$this->quantite,null,null); update produit set quantite=quantite-$this->quantite where ref='$this->ref_prod';");
+            return input("insert into reservation values('$this->login','$this->ref_prod','$this->date_res',$this->nb,$this->quantite,null,null,null); update produit set quantite=quantite-$this->quantite where ref='$this->ref_prod';");
         }
         
         public function update()
         {
             return input("update reservation set reduction='$this->reduction' , nbres='$this->nbres'");    
         }
+		
+		public function payer()
+		{
+			return input("update reservation set achat=1 where login='$this->login'");
+		}
 		
         public function delete()
         {
@@ -102,7 +107,34 @@
 		
         public function allPanierUser()
         {
-            $res=output("SELECT produit.ref , produit.libelle , produit.prix , reservation.quantite, produit.image , reservation.nb ,reservation.date_reservation from produit , client , reservation where produit.ref=reservation.ref_Prod and client.login=reservation.login and client.login='$this->login'");
+			try
+			{
+				$res=output("SELECT produit.ref , produit.libelle , produit.prix , reservation.quantite, produit.image , reservation.nb ,reservation.date_reservation from produit , client , reservation where produit.ref=reservation.ref_Prod and client.login=reservation.login and client.login='$this->login' and achat is null");
+                $i=0;
+                while($tab=$res->fetch(PDO::FETCH_NUM))
+                {
+					if($tab==null)
+					{
+						return null;
+					}
+					else
+					{
+                        $T[$i]=$reservation = array('ref'=>$tab[0],'libelle'=>$tab[1],'prix'=>$tab[2],'quantite'=>$tab[3],'image'=>$tab[4],'nb'=>$tab[5],'date_res'=>$tab[6],);
+                        $i++;
+						return $T;
+					}
+		 	    }
+                
+            }
+			catch( Exception $ex)
+			{
+				return null;
+			}
+		}
+		
+		public function panierAchater()
+		{
+			$res=output("SELECT produit.ref , produit.libelle , produit.prix , reservation.quantite, produit.image , reservation.nb ,reservation.date_reservation from produit , client , reservation where produit.ref=reservation.ref_Prod and client.login=reservation.login and client.login='$this->login' and achat=1");
             $i=0;
             while($tab=$res->fetch(PDO::FETCH_NUM))
             {
@@ -110,7 +142,7 @@
               $i++;
 		 	}
             return $T;
-        }
+		}
 		
 		public function nbrAchat()
         {
