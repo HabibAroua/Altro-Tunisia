@@ -29,8 +29,8 @@
                     <button class="btn btn-lg btn-primary btn-block" type="submit" name="bt_inscription" onclick="show();"> 
                          Inscrire
                     </button>
+					<a href="index.php?page=login">Login</a>
                     <p class="mt-5 mb-3 text-muted">&copy; 2018-2019</p>
-					<?php echo (new \DateTime())->format('Y-m-d'); ?>
                 </form>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-xs-12">
