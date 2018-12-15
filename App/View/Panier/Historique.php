@@ -19,7 +19,7 @@
 						    require_once ('../App/Controller/ReservationController.php');
 							$r=new ReservationController();
 							$T=$r->historique($_SESSION['login']);
-							if(empty($T))
+							if(!isset($T))
 							{
 								echo "<tr><td>Vide</td></tr>";
 							}

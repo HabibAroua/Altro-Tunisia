@@ -53,7 +53,7 @@
             if($test)
             {
                 require_once 'alert.php';
-                show("L ajout au panier effectué avec succes");
+                show("L annulle de cette commande effectue avec succes");
             }
             else
             {

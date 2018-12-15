@@ -60,6 +60,7 @@
 						}
 						else
 						{
+							if(isset($somme))
 							echo "La somme total est <b>$somme DT</b>";
 						}
 					?>

@@ -65,6 +65,8 @@
 					break;
 				    case 'fidel' :require_once('../App/View/Reservation/GereFidel.php');
 					break;
+				    case 'accueil' :require_once('../App/View/default/acceuilAdmin.php');
+					break;
 				}
 			}
         ?>
