@@ -60,7 +60,7 @@
 						}
 						else
 						{
-							echo "La somme total est <b>$somme DT</b> nbr : $nbr , reduction : $reduction , nbres : $nbres";
+							echo "La somme total est <b>$somme DT</b>";
 						}
 					?>
 					    <!--<button type="button" name="bt" class="glyphicon glyphicon-euro">

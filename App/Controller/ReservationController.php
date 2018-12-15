@@ -122,6 +122,13 @@
             }
         }
         
+        public function historique($user)
+        {
+            $r=new Reservation();
+            $r->setLogin($user);
+            return $r->panierAchater();
+        }
+        
     }
 
 ?>

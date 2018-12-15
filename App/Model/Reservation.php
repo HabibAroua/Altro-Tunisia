@@ -146,7 +146,7 @@
 		
 		public function nbrAchat()
         {
-            $res=output("SELECT produit.ref , produit.libelle , produit.prix , reservation.quantite, produit.image , reservation.nb ,reservation.date_reservation from produit , client , reservation where produit.ref=reservation.ref_Prod and client.login=reservation.login and client.login='$this->login'");
+            $res=output("SELECT produit.ref , produit.libelle , produit.prix , reservation.quantite, produit.image , reservation.nb ,reservation.date_reservation from produit , client , reservation where produit.ref=reservation.ref_Prod and client.login=reservation.login and client.login='$this->login' and reservation.achat is null");
             $i=0;
             while($tab=$res->fetch(PDO::FETCH_NUM))
             {

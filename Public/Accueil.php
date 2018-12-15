@@ -126,6 +126,7 @@
 							<li><a href="Accueil.php?page=produit">Consulter les produits disponibles</a></li>
 							<li><a href="Accueil.php?page=panier">Panier : <?php echo $r->produitReserver($_SESSION['login']) ; ?></a></li>
 							<li><a href="Accueil.php?page=paiement">Paiement</a></li>
+							<li><a href="Accueil.php?page=historique">Historique</a></li>
 							<li><a href="logout.php">Deconexion</a></li>
 						</ul>
 						<div style="padding-top:12px;">
@@ -158,6 +159,8 @@
 				    case 'acheter' : require_once('../App/View/Panier/Acheter.php');
 					break;
 				    case 'reserver' : require_once('../App/View/Panier/reserver.php');
+					break;
+				    case 'historique' :require_once('../App/View/Panier/Historique.php');
 					break;
 				    default : require_once('../App/View/default/accueil.php');
 					break;
