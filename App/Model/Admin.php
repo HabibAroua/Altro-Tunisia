@@ -8,13 +8,9 @@ require_once('../App/DataBase/query.php');
         private $nom;
         private $prenom;
         
-        public function __construct($login,$motDePasse,$nom,$prenom)
+        public function __construct()
         {
-            $this->login=$login;
-            $this->motDePAsse=$motDePasse;
-            $this->nom=$nom;
-            $this->prenom=$prenom;
-            $this->date_res=$date_res;
+
         }
 
         public function getLogin()
@@ -63,7 +59,7 @@ require_once('../App/DataBase/query.php');
             $i=0;
             while($tab=$res->fetch(PDO::FETCH_NUM))
             {
-              $T[$i]=$admin = array('login'=>$tab[0]."",'password'=>$tab[1]."",'nom'=>$tab[2]."",'prenom'=>$tab[3]."",'email'=>$tab[4]."",'date_naissance'=>$tab[5]."",'date_inscription'=>$tab[6],);
+              $T[$i]=$admin = array('login'=>$tab[0],'password'=>$tab[1],);
               $i++;
 		 	}
             return $T;

@@ -1,3 +1,8 @@
+<?php
+    require_once('../App/Controller/AdminController.php');
+	$a=new AdminController();
+    $a->IsLogin();
+?>
 <!DOCTYPE html>
 <html>
     <head>

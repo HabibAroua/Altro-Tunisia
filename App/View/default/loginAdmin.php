@@ -22,7 +22,7 @@
                     <label class="col-xs-12" for="usuario"><h4>User</h4></label>
                  <div class="col-xs-10 col-xs-offset-1">
                         
-                    <input type="text" id="usuario" class="form-control Input">
+                    <input type="text" id="usuario" name="login" class="form-control Input">
                         
                         </div>
                     
@@ -30,7 +30,7 @@
                     <div class="form-group">
                     <label class="col-xs-12" for="password"><h4>Password</h4></label>
                  <div class="col-xs-10 col-xs-offset-1">
-                    <input type="password" id="password" class="form-control col-xs-12 Input">
+                    <input type="password" id="password" name="password" class="form-control col-xs-12 Input">
                         </div>
                     
                     </div>
@@ -48,6 +48,8 @@
 <?php
          if(isset($_POST['bt_login']))
         {
-            header("Location: Accueil.php");
+              require_once('../App/Controller/AdminController.php');
+	     $a=new AdminController();
+	     $a->login($_POST['login'],$_POST['password']);
         }
 ?>
