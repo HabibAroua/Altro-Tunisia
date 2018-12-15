@@ -63,9 +63,6 @@
 							echo "La somme total est <b>$somme DT</b>";
 						}
 					?>
-					    <!--<button type="button" name="bt" class="glyphicon glyphicon-euro">
-							Acheter
-						</button> -->
 						<input class="glyphicon glyphicon-euro" name="bt" type="submit" value="Acheter" />
 					</form>
 				</fieldset>

@@ -1,11 +1,11 @@
 <script>
-	function allerAnnuler(nb,ref,quantite)
+	function allerAnnuler(nb,ref,quantite,date)
 	{
 		swal
 			               (
 						     {
 								title: "Are you sure?",
-								text: "Voulez vous supprimer cet client ?",
+								text: "Voulez vous annulez cette reservation ?",
                                         icon: "warning",
                                         buttons: true,
                                         dangerMode: true,
@@ -24,7 +24,7 @@
 						                                     //   icon: "success",
 													//}
 				                                        //);
-																document.location.href="http://localhost/SiteWebCommercial/Public/Accueil.php?page=panier&nb="+nb+"&ref="+ref+"&quantite="+quantite;
+																document.location.href="http://localhost/SiteWebCommercial/Public/Accueil.php?page=panier&nb="+nb+"&ref="+ref+"&quantite="+quantite+"&date="+date;
 
 							                    }
 					                              else
@@ -80,7 +80,7 @@
 									    echo "<td>$date_res</td>";
 									    echo "<td><img src='../Admin/imageProduit/$image' style='width:50px; height:50px;''</td>";
 									    ?>
-					                        <td><center><button type="button" class="glyphicon glyphicon-trash" onclick="allerAnnuler('<?php echo $nb ; ?>','<?php echo $ref ; ?>','<?php echo $quantite ; ?>');"></button></center></td>
+					                        <td><center><button type="button" class="glyphicon glyphicon-trash" onclick="allerAnnuler('<?php echo $nb ; ?>','<?php echo $ref ; ?>','<?php echo $quantite ; ?>','<?php echo $date_res ; ?>');"></button></center></td>
 
 					                     <?php
 									echo "</tr>";
@@ -93,10 +93,36 @@
     </div>
 </div>
 <?php
-    if((isset($_GET['nb'])) && (isset($_GET['ref'])) && (isset($_GET['quantite'])))
+    if((isset($_GET['nb'])) && (isset($_GET['ref'])) && (isset($_GET['quantite']))  && (isset($_GET['date']) ))
 	{
-		require_once ('../App/Controller/ReservationController.php');
-		$r=new ReservationController();
-		$r->annulerReservation($_GET['nb'],$_GET['ref'],$_GET['quantite']);
+		$date=$_GET['date'];
+		$today=(new \DateTime())->format('Y-m-d');
+		$datetime1 = new DateTime($date);
+        $datetime2 = new DateTime($today);
+        $interval = $datetime1->diff($datetime2);
+        $x= $interval->format('%a');
+		if($x>=2)
+		{
+			echo
+			"<script>
+			    swal
+				(
+				    {
+				        title: 'Erreur',
+                        text: 'Vous pasez le 48 heures',
+                        icon: 'warning',
+                        buttons: true,
+                        dangerMode: true,
+                     }
+				);
+			</script>";
+			
+		}
+		else
+		{
+		    require_once ('../App/Controller/ReservationController.php');
+		    $r=new ReservationController();
+		    $r->annulerReservation($_GET['nb'],$_GET['ref'],$_GET['quantite']);	
+		}
 	}
 ?>
