@@ -29,14 +29,7 @@
     </div>
 </div>
 </div>
-<?php
-    if(isset($_POST['bt_inscription']))
-	{
-		require_once('../App/Controller/ClientController.php');
-		$c=new ClientController();
-		$c->ajouterClient($_POST['login'],$_POST['password'],$_POST['confPassword'],$_POST['nom'],$_POST['prenom'],$_POST['email'],$_POST['date_naissance']);
-	}
-?>
+
 <?php
     if(isset($_POST['bt_login']))
 	{

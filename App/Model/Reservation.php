@@ -113,19 +113,13 @@
                 $i=0;
                 while($tab=$res->fetch(PDO::FETCH_NUM))
                 {
-					if($tab==null)
-					{
-						return null;
-					}
-					else
-					{
-                        $T[$i]=$reservation = array('ref'=>$tab[0],'libelle'=>$tab[1],'prix'=>$tab[2],'quantite'=>$tab[3],'image'=>$tab[4],'nb'=>$tab[5],'date_res'=>$tab[6],);
-                        $i++;
-						return $T;
-					}
-		 	    }
+
+                    $T[$i]=$reservation = array('ref'=>$tab[0],'libelle'=>$tab[1],'prix'=>$tab[2],'quantite'=>$tab[3],'image'=>$tab[4],'nb'=>$tab[5],'date_res'=>$tab[6],);
+                    $i++;
+				}
+					return $T;
+		 	}
                 
-            }
 			catch( Exception $ex)
 			{
 				return null;

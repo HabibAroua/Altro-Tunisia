@@ -18,7 +18,7 @@
 				<?php
 					echo "<div><div id='wrapper'>"; 
 						echo "<div class='contents'>";
-						    if(empty($T))
+						    if(!isset($T))
 							{
 								echo "<b>Aucune donnée disponible</b>";
 							}
