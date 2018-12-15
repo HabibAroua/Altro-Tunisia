@@ -180,7 +180,7 @@
         
         public function nbrProduitReserverByClient($user)
         {
-            $res=output("select * from reservation where login='$user'");
+            $res=output("select * from reservation where login='$user' and achat is null");
             $i=0;
             while($tab=$res->fetch(PDO::FETCH_NUM))
             {
