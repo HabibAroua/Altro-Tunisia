@@ -2,37 +2,29 @@
 	function allerAnnuler(nb,ref,quantite,date)
 	{
 		swal
-			               (
-						     {
-								title: "Are you sure?",
-								text: "Voulez vous annulez cette reservation ?",
-                                        icon: "warning",
-                                        buttons: true,
-                                        dangerMode: true,
-							}
-			               )
-                              .then
-						(
-							 (willDelete) =>
-			                                   {
-							                    if (willDelete)
-				                                   {
-								                    //swal
-					                                   //(
-								                       //  "Poof! Your imaginary file has been deleted!",
-					                                        //{
-						                                     //   icon: "success",
-													//}
-				                                        //);
-																document.location.href="http://localhost/SiteWebCommercial/Public/Accueil.php?page=panier&nb="+nb+"&ref="+ref+"&quantite="+quantite+"&date="+date;
-
-							                    }
-					                              else
-					                              {
-						                              swal("Suppression annulé");
-											}
-										}
-				          );
+		(
+			{
+				title: "Are you sure?",
+				text: "Voulez vous annulez cette reservation ?",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+			}
+		)
+        .then
+		(
+			(willDelete) =>
+			{
+				if (willDelete)
+				{
+					document.location.href="http://localhost/SiteWebCommercial/Public/Accueil.php?page=panier&nb="+nb+"&ref="+ref+"&quantite="+quantite+"&date="+date;
+				}
+				else
+				{
+					swal("Suppression annulé");
+			    }
+			}
+		);
 	}
 </script>
 <div style="padding-right: 1px "><div class="padding">
@@ -113,7 +105,7 @@
                         icon: 'warning',
                         buttons: true,
                         dangerMode: true,
-                     }
+                    }
 				);
 			</script>";
 		}
