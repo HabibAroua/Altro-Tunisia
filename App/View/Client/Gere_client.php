@@ -3,6 +3,35 @@
      $c=new ClientController();
      $T=$c->getAllClient();
 ?>
+<script>
+     function show(id)
+	{
+		swal
+		(
+			{
+				title: "Are you sure?",
+				text: "Voulez vous supprimer cet client ?",
+                    icon: "warning",
+                    buttons: true,
+                    dangerMode: true,
+			}
+		)
+          .then
+		(
+			(willDelete) =>
+			{
+				if (willDelete)
+				{
+					document.location.href="http://localhost/SiteWebCommercial/Admin/Accueil.php?page=client&user="+id;
+				}
+				else
+				{
+					swal("Suppression annulé");
+				}
+			}
+		);
+	}            
+</script>
 <div style="padding-right: 1px "><div class="padding">
 	<div class="container">
           <center>
@@ -19,65 +48,25 @@
                     </tr>
                </thead>
                <tbody>
-                    
-                    <script>
-                         //function show(id)
-                         //{
-                              //document.location.href="http://localhost/SiteWebCommercial/Admin/Accueil.php?page="+id;
-					function show(id)
-					{
-						swal
-			               (
-						     {
-								title: "Are you sure?",
-								text: "Voulez vous supprimer cet client ?",
-                                        icon: "warning",
-                                        buttons: true,
-                                        dangerMode: true,
-							}
-			               )
-                              .then
-						(
-							 (willDelete) =>
-			                                   {
-							                    if (willDelete)
-				                                   {
-								                    //swal
-					                                   //(
-								                       //  "Poof! Your imaginary file has been deleted!",
-					                                        //{
-						                                     //   icon: "success",
-													//}
-				                                        //);
-												document.location.href="http://localhost/SiteWebCommercial/Admin/Accueil.php?page=client&user="+id;
-							                    }
-					                              else
-					                              {
-						                              swal("Suppression annulé");
-											}
-										}
-				          );
-					}            
-                    </script>
                     <?php
                          foreach($T as $v)
                          {
                               echo "<tr>";
-                              $login=$v{'login'};
-                              $nom=$v{'nom'};
-                              $prenom=$v{'prenom'};
-                              $email=$v{'email'};
-                              echo "<td> $login</td>";
-                              echo "<td> $nom</td>";
-                              echo "<td> $prenom</td>";
-                              echo "<td> $email</td>";
-                              ?>
-                              <td>
-							<center>
-								<button type="button" class="glyphicon glyphicon-trash" onclick="show('<?php echo $login  ?>');"></button>
-							</center>
-						</td>
-                              <?php
+                                   $login=$v{'login'};
+                                   $nom=$v{'nom'};
+                                   $prenom=$v{'prenom'};
+                                   $email=$v{'email'};
+                                   echo "<td> $login</td>";
+                                   echo "<td> $nom</td>";
+                                   echo "<td> $prenom</td>";
+                                   echo "<td> $email</td>";
+                                   ?>
+                                   <td>
+							     <center>
+								     <button type="button" class="glyphicon glyphicon-trash" onclick="show('<?php echo $login  ?>');"></button>
+							     </center>
+						     </td>
+                         <?php
                               echo '</tr>';
                          }
                     ?>
@@ -85,7 +74,6 @@
           </table>
      </div>
 </div>
-
 <?php
      if(isset($_GET['user']))
      {
