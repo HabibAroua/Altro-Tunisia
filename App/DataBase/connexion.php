@@ -65,17 +65,5 @@
 		
 	}
 	$connection=new Connection('localhost','altro_tunisia','root','');
-	
-    /*
-	$query="insert into etudiant values(null,'Hatem','Aziza')";
-	$res=$connection->con->exec($query);
-	if($res!=0)
-	{
-		echo 'Insertion effectué avec succes';
-	}
-	else
-	{
-		echo "Erreur au niveau de l'insertion";
-	}
-	*/
+
 ?>
