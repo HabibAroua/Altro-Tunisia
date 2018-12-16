@@ -34,7 +34,7 @@
             }
             else
             {
-                $this->session->connect($myLogin,$myPassword,'http://localhost/SiteWebCommercial/Admin/Accueil.php',3600*48);
+                $this->session->connect($myLogin,$myPassword,'http://localhost/SiteWebCommercial/Admin/Accueil.php?page=accueil',3600*48);
             }
         }
         

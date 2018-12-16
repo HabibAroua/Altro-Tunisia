@@ -133,7 +133,7 @@
 			else
 			{
 				require_once 'alert.php';
-                show("Erreur au niveau du supression");
+                show("On ne peut pas supprimer ce client car il a déjà des reservations");
 			}
 		}
     }

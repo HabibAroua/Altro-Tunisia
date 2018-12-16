@@ -10,22 +10,22 @@
                         <input type="text" id="inputref" class="form-control" placeholder="saisir la reférence" name="reference" value="<?php if(isset($_POST['reference'])) echo $_POST['reference'] ; ?>" required>
                         <input type="file" id="inputFile" class="glyphicon glyphicon-paperclip" placeholder="Saisir File" name="image" required >
                         <input type="text" id="inputText" class="form-control" placeholder="saisir libeille" name="libelle" required value="<?php if(isset($_POST['libelle'])) echo $_POST['libelle'] ; ?>">
-                        <input type="text" id="inputText" class="form-control" placeholder="saisir prix" name="prix" required value="<?php if(isset($_POST['prix'])) echo $_POST['prix'] ; ?>">
+                        <input type="number" min="75" id="inputText" class="form-control" placeholder="saisir prix" name="prix" required value="<?php if(isset($_POST['prix'])) echo $_POST['prix'] ; ?>">
                         <textarea name="description" style="width:1140px; height:100px;" required><?php if(isset($_POST['description'])) echo $_POST['description'] ; ?> </textarea>
                         <input type="number" min="1" id="inputText" class="form-control" placeholder="saisir quantité" name="quantite" required value="">
 
                         <br>
                         <select name='inputCategorie'>
                             <?php
-                            require_once ('../App/Controller/CategorieController.php');
-                            $c=new CategorieController();
-                            $T=$c->getAllCategorie();
-                            foreach($T as $v)
-                            {
-                                $id = $v{'id'};
-                                $libelle = $v{'libelle'};
-                                echo "<option value='$id'>$libelle</option>";
-                            }
+                                require_once ('../App/Controller/CategorieController.php');
+                                $c=new CategorieController();
+                                $T=$c->getAllCategorie();
+                                foreach($T as $v)
+                                {
+                                    $id = $v{'id'};
+                                    $libelle = $v{'libelle'};
+                                    echo "<option value='$id'>$libelle</option>";
+                                }
                             ?>
                         </select>
                         <button class="btn btn-lg btn-primary btn-block" type="submit" name="bt_ajouter_produit">
