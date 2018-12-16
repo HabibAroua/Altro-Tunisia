@@ -96,10 +96,10 @@
                                 "<script>
                                     swal(
                                             {
-                                                 title: 'Erreur',
+                                                title: 'Erreur',
                                                 text: 'Les fichiers png ou jpg sont acceptable',
-                                                 icon: 'warning',
-                                                 button: 'OK',
+                                                icon: 'warning',
+                                                button: 'OK',
                                             }
                                         );
                                 </script>";
