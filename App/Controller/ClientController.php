@@ -34,7 +34,6 @@
         public function login($login,$password)
         {
             $c=new Client('','','','','','','');
-            //echo json_encode($c->allClient());
             $T=$c->allClient();
             $myLogin='';
             $myPassword='';
@@ -70,7 +69,6 @@
 		public function getAllClient()
 		{
 			$c=new Client('','','','','','','');
-            //echo json_encode($c->allClient());
             $T=$c->allClient();
 			return $T;
 		}
