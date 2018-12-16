@@ -130,15 +130,4 @@
 			return input("update client set password='$newPassword' where login='$login'");
 		}
 	}
-    //$c=new Client('','','','','','','');
-    //echo json_encode($c->allClient());
-    //$T=$c->allClient();
-    
-    //echo $T[0]{'login'}.'<br>';
-    //echo $T[1]{'login'}.'<br>';
-    
-    //foreach($T as $v)
-    //{
-      //  echo $v{'login'}.'<br>';
-    //}
 ?>
