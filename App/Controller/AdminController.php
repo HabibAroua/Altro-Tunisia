@@ -10,12 +10,9 @@
 			$this->session=new SessionAdmin();
 		}
         
-        
-        
         public function login($login,$password)
         {
             $a=new Admin();
-            //echo json_encode($c->allClient());
             $T=$a->allAdmin();
             $myLogin='';
             $myPassword='';
@@ -48,4 +45,5 @@
             $this->session->logOut();
         }
     }
+	
 ?>
