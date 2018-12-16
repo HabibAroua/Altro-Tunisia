@@ -28,9 +28,7 @@
                 </div>
 				<div class="collapse navbar-collapse" id="navbar-collapse-main">
 					<ul class="nav navbar-nav navbar-right">
-						<li>
-                            <a class="active" href="Accueil.php?page=accueil">Acceuil</a>
-                        </li>
+						<li><a class="active" href="Accueil.php?page=accueil">Acceuil</a></li>
 						<li><a href="Accueil.php?page=client">Gestion des clients</a></li>
 						<li><a href="Accueil.php?page=gereProduit">Gestion des produits</a></li>
 						<li><a href="Accueil.php?page=gererReservation">Gestion des réservation</a></li>
