@@ -2,37 +2,29 @@
 	function allerAnnuler(nb,ref,quantite)
 	{
 		swal
-			               (
-						     {
-								title: "Are you sure?",
-								text: "Voulez vous supprimer cette commande ?",
-                                        icon: "warning",
-                                        buttons: true,
-                                        dangerMode: true,
-							}
-			               )
-                              .then
-						(
-							 (willDelete) =>
-			                                   {
-							                    if (willDelete)
-				                                   {
-								                    //swal
-					                                   //(
-								                       //  "Poof! Your imaginary file has been deleted!",
-					                                        //{
-						                                     //   icon: "success",
-													//}
-				                                        //);
-																document.location.href="http://localhost/SiteWebCommercial/Admin/Accueil.php?page=gererReservation&nb="+nb+"&ref="+ref+"&quantite="+quantite;
-
-							                    }
-					                              else
-					                              {
-						                              swal("Suppression annulé");
-											}
-										}
-				          );
+		(
+			{
+				title: "Are you sure?",
+				text: "Voulez vous supprimer cette commande ?",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+			}
+		)
+        .then
+		(
+			(willDelete) =>
+			{
+				if (willDelete)
+				{
+					document.location.href="http://localhost/SiteWebCommercial/Admin/Accueil.php?page=gererReservation&nb="+nb+"&ref="+ref+"&quantite="+quantite;
+				}
+				else
+				{
+					swal("Suppression annulé");
+				}
+			}
+		);
 	}
 </script>
 <div style="padding-right: 1px "><div class="padding">
@@ -88,7 +80,8 @@
 							}
 						?>
 					</tbody>
-            </div>
+				</table>
+			</div>
         </div>
     </div>
 </div>
