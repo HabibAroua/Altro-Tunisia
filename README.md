@@ -1,16 +1,16 @@
 On doit présenter ce projet 
 
 
-Partie admin
+Partie admin:
 
 
 
 
 
 
-Partie client
+Partie client:
 
 
 
 
-Partie visiteur
+Partie visiteur:
