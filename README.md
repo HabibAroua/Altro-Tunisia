@@ -1,4 +1,4 @@
-<b>On doit présenter ce projet</b> 
+<b>On doit présenter ce projet :</b> 
 
 
 Partie admin:
