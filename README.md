@@ -1,7 +1,7 @@
 <b>On doit présenter ce projet :</b> 
 
 
-Partie admin:
+Partie admin :
 
 
 
