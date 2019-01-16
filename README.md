@@ -5,12 +5,7 @@ Partie admin :
 
 
 
-
-
-
 Partie client:
-
-
 
 
 
