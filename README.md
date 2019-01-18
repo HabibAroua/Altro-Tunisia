@@ -1,12 +1,12 @@
 <b>On doit présenter ce projet :</b> 
 
 
-<s>Partie admin :</s>
+<u>Partie admin :</u>
 
 
 
-<s>Partie client:</s>
+<u>Partie client:</u>
 
 
 
-<s>Partie visiteur:</s>
+<u>Partie visiteur:</u>
