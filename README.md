@@ -1,12 +1,12 @@
 <b>On doit présenter ce projet :</b> 
 Pour executer :
 
-<i>Partie admin :</i>
+<h2><i>Partie admin :</i></h2>
 
 
 
-<i>Partie client :</i>
+<h2><i>Partie client :</i></h2>
 
 
 
-<i>Partie visiteur :</i>
+<h2><i>Partie visiteur :</i></h2>
