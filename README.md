@@ -4,7 +4,6 @@ Pour executer :
 <h2><i>Partie admin :</i></h2>
 
 
-
 <h2><i>Partie client :</i></h2>
 
 
