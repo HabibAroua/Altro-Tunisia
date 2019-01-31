@@ -10,5 +10,4 @@ Ce projet accepte les version php > PHP5
 <h2><i>Partie client :</i></h2>
 
 
-
 <h2><i>Partie visiteur :</i></h2>
