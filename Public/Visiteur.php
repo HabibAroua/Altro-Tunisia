@@ -116,8 +116,6 @@
 						<ul class="nav navbar-nav navbar-right">
 						    <li><a class="active" href="Accueil.php?page=accueil">Acceuil</a></li>
 							<li><a href="Accueil.php?page=produit">Consulter les produits disponibles</a></li>
-
-							<li><a href="logout.php">Deconexion</a></li>
 						</ul>
 						<div style="padding-top:12px;">
 							<form action="Accueil.php?page=rechercheProduit" method="POST">
