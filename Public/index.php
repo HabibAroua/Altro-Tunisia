@@ -7,7 +7,7 @@
         <meta name="author" content="">
         <link rel="icon" href="https://getbootstrap.com/favicon.ico">
         <title>Altro TUNISIA</title>
-        <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet" >
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 		<link href="css/sweetalert2.css" rel="stylesheet">
