@@ -9,14 +9,14 @@
         <title>Altro TUNISIA</title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet" >
-        <script src="javascript/sweetalert.min.js"></script>
 		<link href="css/sweetalert2.css" rel="stylesheet">
+    </head>
+    <body>
+		<script src="javascript/sweetalert.min.js"></script>
         <script src="javascript/bootstrap.min.js"></script>
         <script src="javascript/jquery-3.3.1.min.js"></script>
         <script src="javascript/jquery.min.js"></script>
         <script src="javascript/Alert.js"></script>
-    </head>
-    <body>
         <?php
             if(isset($_GET['page']))
             {
