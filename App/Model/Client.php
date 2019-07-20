@@ -71,16 +71,16 @@
         {
             $this->email=$email;
         }
-		//Date email
-		public function getDateNaissance()
-		{
-			return $this->date_naissance;
-		}
+	//Date email
+	public function getDateNaissance()
+	{
+		return $this->date_naissance;
+	}
 		
-		public function setDateNaissance($date_naissance)
-		{
-			$this->date_naissance=$date_naissance;
-		}
+	public function setDateNaissance($date_naissance)
+	{
+		$this->date_naissance=$date_naissance;
+	}
         
         public function add()
         {
@@ -99,35 +99,35 @@
         
         public function allClient()
         {
-            $res=output("select * from client ");
+	    $res=output("select * from client ");
             $i=0;
             while($tab=$res->fetch(PDO::FETCH_NUM))
             {
-              $T[$i]=$client = array('login'=>$tab[0]."",'password'=>$tab[1]."",'nom'=>$tab[2]."",'prenom'=>$tab[3]."",'email'=>$tab[4]."",'date_naissance'=>$tab[5]."",'date_inscription'=>$tab[6],);
-              $i++;
-		 	}
+              	$T[$i]=$client = array('login'=>$tab[0]."",'password'=>$tab[1]."",'nom'=>$tab[2]."",'prenom'=>$tab[3]."",'email'=>$tab[4]."",'date_naissance'=>$tab[5]."",'date_inscription'=>$tab[6],);
+              	$i++;
+	    }
             return $T;
         }
 		
-		public function findClientByLogin($login)
-		{
-			$res=output("select * from client where login='$login' ");
+	public function findClientByLogin($login)
+	{
+	    $res=output("select * from client where login='$login' ");
             $i=0;
             while($tab=$res->fetch(PDO::FETCH_NUM))
             {
-			    $this->login=$tab[0];
+	       $this->login=$tab[0];
                 $this->motDePAsse=$tab[1];
                 $this->nom=$tab[2];
                 $this->prenom=$tab[3];
                 $this->email=$tab[4];
                 $this->date_naissance=$tab[5];
                 $this->date_inscription=$tab[6];	
-			}
-		}
-		
-		public function editPassword($login,$newPassword)
-		{
-			return input("update client set password='$newPassword' where login='$login'");
-		}
+	    }
 	}
+		
+	public function editPassword($login,$newPassword)
+	{
+		return input("update client set password='$newPassword' where login='$login'");
+	}
+    }
 ?>
