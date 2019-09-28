@@ -2,57 +2,54 @@
 * sweetalert2 v7.26.12
 * Released under the MIT License.
 */
-(function (global, factory) {
+(function (global, factory) 
+{
 	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
 	typeof define === 'function' && define.amd ? define(factory) :
 	(global.Sweetalert2 = factory());
-}(this, (function () { 'use strict';
+}
+(
+	this, 
+	(
+		function () 
+	 	{
+			'use strict';
+			var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj)
+			{
+				return typeof obj;
+			}
+			: function (obj) 
+			{
+				return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+			};
+			var classCallCheck = function (instance, Constructor)
+			{
+  			if (!(instance instanceof Constructor)) 
+			{
+    				throw new TypeError("Cannot call a class as a function");
+  			}
+		};
+		var createClass = function () 
+		{
+  			function defineProperties(target, props) 
+			{
+    				for (var i = 0; i < props.length; i++) 
+				{
+      					var descriptor = props[i];
+      					descriptor.enumerable = descriptor.enumerable || false;
+      					descriptor.configurable = true;
+      					if ("value" in descriptor) descriptor.writable = true;
+      					Object.defineProperty(target, descriptor.key, descriptor);
+    				}
+  			}
 
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) {
-  return typeof obj;
-} : function (obj) {
-  return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
-};
-
-
-
-
-
-
-
-
-
-
-
-var classCallCheck = function (instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-};
-
-var createClass = function () {
-  function defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];
-      descriptor.enumerable = descriptor.enumerable || false;
-      descriptor.configurable = true;
-      if ("value" in descriptor) descriptor.writable = true;
-      Object.defineProperty(target, descriptor.key, descriptor);
-    }
-  }
-
-  return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);
-    if (staticProps) defineProperties(Constructor, staticProps);
-    return Constructor;
-  };
-}();
-
-
-
-
-
-
+  			return function (Constructor, protoProps, staticProps)
+			{
+    				if (protoProps) defineProperties(Constructor.prototype, protoProps);
+    				if (staticProps) defineProperties(Constructor, staticProps);
+    				return Constructor;
+  			};
+		}();
 
 var _extends = Object.assign || function (target) {
   for (var i = 1; i < arguments.length; i++) {
@@ -108,16 +105,6 @@ var inherits = function (subClass, superClass) {
   });
   if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
 };
-
-
-
-
-
-
-
-
-
-
 
 var possibleConstructorReturn = function (self, call) {
   if (!self) {
@@ -2423,4 +2410,7 @@ Swal.default = Swal;
 return Swal;
 
 })));
-if (typeof window !== 'undefined' && window.Sweetalert2){  window.swal = window.sweetAlert = window.Swal = window.SweetAlert = window.Sweetalert2}
+if (typeof window !== 'undefined' && window.Sweetalert2)
+{  
+	window.swal = window.sweetAlert = window.Swal = window.SweetAlert = window.Sweetalert2
+}
