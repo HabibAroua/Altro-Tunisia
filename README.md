@@ -5,10 +5,10 @@ Pour executer : (la version de PHP est 7.1 , SGBD : MYSQL ou MariaDB , OS : Wind
 <br>
 Ce projet accepte les versions php > PHP5 (on a utilisé le PDO pour faciliter la migration du base de donnée vers Oracle ou PostgreSQL ou Sql Server)
 
-<h2><i>Partie admin :</i></h2>
+<h2><i>Partie Back-office :</i></h2>
 
 
-<h2><i>Partie client :</i></h2>
+<h2><i>Partie Front-office :</i></h2>
 
 
 <h2><i>Partie visiteur :</i></h2>
