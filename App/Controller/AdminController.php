@@ -1,6 +1,7 @@
 <?php
     require_once('../App/Model/Admin.php');
     require_once('../App/Controller/sessionAdmin.php') ;
+
     class AdminController
     {
         private $session;
