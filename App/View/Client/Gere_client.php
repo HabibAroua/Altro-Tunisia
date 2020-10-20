@@ -11,9 +11,9 @@
 			{
 				title: "Are you sure?",
 				text: "Voulez vous supprimer cet client ?",
-                    icon: "warning",
-                    buttons: true,
-                    dangerMode: true,
+                    		icon: "warning",
+                    		buttons: true,
+                    		dangerMode: true,
 			}
 		)
           .then
