@@ -16,4 +16,3 @@ Ce projet accepte les versions php > PHP5 (on a utilisé le PDO pour faciliter l
 Pour créer la base de donnée vous devez suivre les requêtte suivantes:
 <br>
 https://github.com/HabibAroua/Altro-Tunisia/blob/master/App/DataBase/req.sql
-
