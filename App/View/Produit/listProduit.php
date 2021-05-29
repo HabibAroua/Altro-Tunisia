@@ -1,7 +1,7 @@
 <?php
 	require_once ('../App/Controller/ProduitController.php');
-    $p=new ProduitController();
-    $T=$p->getAllProduitDisponible();
+    	$p=new ProduitController();
+    	$T=$p->getAllProduitDisponible();
 ?>
 <script src="javascript/pagination.js"></script>
 <script>
@@ -27,30 +27,31 @@
 						        foreach($T as $v)
 						        {
 							        $ref=$v{'ref'};
-                                    $libelle=$v{'libelle'};
-                                    $prix=$v{'prix'};
-                                    $description=$v{'description'};
-                                    $categorie=$v{'categorie'};
-                                    $date_ajout=$v{'date_ajout'};
-                                    $image=$v{'image'};
-									$quantite=$v{'quantite'};
-					     	        echo "<div>";
+								$libelle=$v{'libelle'};
+								$prix=$v{'prix'};
+                                    				$description=$v{'description'};
+                                    				$categorie=$v{'categorie'};
+                                    				$date_ajout=$v{'date_ajout'};
+                                    				$image=$v{'image'};
+								$quantite=$v{'quantite'};
+					     	        	echo "<div>";
 									    echo"<div class='col-md-3'>";
-                                            echo "<div class='card mb-3'>";
+                                            					echo "<div class='card mb-3'>";
 								                echo "<img style='height: 200px; width: 100%; display: block;' src='../Admin/imageProduit/$image' alt='Card image'>";
-                                                echo "<div class='card-body'>";
+                                                				echo "<div class='card-body'>";
 							                        echo "<p class='card-text'>Marque:<b>$libelle</b></p>";
-													echo "<p class='card-text'>Date d'ajout : <b>$date_ajout</b></p>";
-													echo "<p class='card-text'>Prix : $prix DT</p>";
-													echo "<p class='card-text'>$description</p>";
-													echo "<div class='card-text'><div class='btn-group' role='group'>";
-                                                    echo "</div></div>";
-                                                echo "</div>";
-                                            echo "</div>";
-											?><button type='button' onclick="show('<?php echo $ref; ?>')" class='glyphicon glyphicon-plus'>Ajouter au panier</button>
-											<?php
-                                        echo "</div>";
-						            echo "</div>";					
+										echo "<p class='card-text'>Date d'ajout : <b>$date_ajout</b></p>";
+										echo "<p class='card-text'>Prix : $prix DT</p>";
+										echo "<p class='card-text'>$description</p>";
+										echo "<div class='card-text'><div class='btn-group' role='group'>";
+                                                    				echo "</div></div>";
+                                                				echo "</div>";
+                                            			echo "</div>";
+								?>
+									<button type='button' onclick="show('<?php echo $ref; ?>')" class='glyphicon glyphicon-plus'>Ajouter au panier</button>
+								<?php
+                                        				echo "</div>";
+						            		echo "</div>";					
 								}
 							}
 						echo "</div>";
